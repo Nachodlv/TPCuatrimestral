@@ -1,0 +1,3 @@
+C:/Users/Ignacio/Dropbox/Facultad/AyED/TPCuatrimestral/cmake-build-debug/CMakeFiles/TPCuatrimestral.dir
+C:/Users/Ignacio/Dropbox/Facultad/AyED/TPCuatrimestral/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Ignacio/Dropbox/Facultad/AyED/TPCuatrimestral/cmake-build-debug/CMakeFiles/rebuild_cache.dir
