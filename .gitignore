@@ -1,5 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### NetBeans template
+cmake-build-debug/
 nbproject/private/
 build/
 nbbuild/
