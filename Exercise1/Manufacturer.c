@@ -9,7 +9,7 @@
 #include "Provider.h"
 
 Manufacturer* newManufacturer(char* name, char* description, char* direction, char*city, char* phone, char* web){
-    Manufacturer* manufacturer = malloc(sizeof(manufacturer));
+    Manufacturer* manufacturer = malloc(sizeof(Manufacturer));
     manufacturer->createdAppliances=0;
     manufacturer->city=malloc(sizeof(city));
     manufacturer->name=malloc(sizeof(name));

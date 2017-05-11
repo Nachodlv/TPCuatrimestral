@@ -16,6 +16,10 @@ Catalogue* newCatalogue(char* id,char* name, double discount){
     catalogue1->applianceArray = malloc(sizeof(Appliance)*10);
     catalogue1->applianceBooleanArray = malloc(sizeof(int)*10);
     catalogue1->maxCapacity=10;
+    int i;
+    for(i=0;i<catalogue1->maxCapacity;i++){
+        catalogue1->applianceBooleanArray[i]=0;
+    }
 
     strcpy(catalogue1->id,id);
     strcpy(catalogue1->name,name);

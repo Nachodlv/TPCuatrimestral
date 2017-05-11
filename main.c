@@ -19,15 +19,15 @@ int main() {
 
     printf("%d",1);
     printf("%s",phones->name);
-    scanf(" %c", "Choose an option: ");
+    char a;
+    scanf(" %lf",a );
     return 0;
 }
 
-void printCatalogue(Catalogue* catalogue1){
-    int maxCapacity = sizeof(catalogue1->applianceArray)/ sizeof(Appliance);
+void printCatalogue(Catalogue* catalogue1){ ;
     int counter=1;
     int i;
-    for(i=0;i<maxCapacity;i++){
+    for(i=0;i<catalogue1->maxCapacity;i++){
         if(catalogue1->applianceBooleanArray[i]==1){
             printf("%d",counter);
             printf("%s\n",catalogue1->applianceArray[i]->name);
