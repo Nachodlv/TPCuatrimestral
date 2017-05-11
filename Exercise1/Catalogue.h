@@ -13,6 +13,7 @@ struct catalogue{
     double discount;
     Appliance** applianceArray;
     int* applianceBooleanArray;
+    int maxCapacity;
 };
 
 Catalogue* newCatalogue(char* id,char* name, double discount);

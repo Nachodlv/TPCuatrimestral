@@ -13,7 +13,9 @@ Appliance* newAppliance(char* name, char* model, double price, double discount, 
     appliance->model = malloc(sizeof(model));
     appliance->name = malloc(sizeof(name));
     appliance->provider = malloc(sizeof(provider1));
-    appliance->label = newLabel(generateId(name,model),name);
+    appliance->label = malloc(sizeof(Label));
+
+    appliance->label = newLabel("asd",name);
 
     appliance->provider=provider1;
     strcpy(appliance->model,model);

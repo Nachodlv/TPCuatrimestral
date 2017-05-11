@@ -14,6 +14,7 @@ struct cart{
     double total;
     LineCart** lineCartArray;
     int* lineCartBooleanArray;
+    int maxCapacity;
 };
 
 Cart* newCart(char* id);

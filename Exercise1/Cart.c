@@ -19,15 +19,15 @@ Cart* newCart(char* id){
     cart1->id = malloc(sizeof(id));
     cart1->lineCartArray = malloc(sizeof(LineCart)*10);
     cart1->lineCartBooleanArray = malloc(sizeof(int)*10);
+    cart1->maxCapacity=10;
 
     strcpy(cart1->id,id);
     return cart1;
 }
 
 void freeCart(Cart* cart1){
-    int maxCapacity = sizeof(cart1->lineCartArray)/ sizeof(LineCart);
     int i;
-    for(i=0;i<maxCapacity;i++){
+    for(i=0;i<cart1->maxCapacity;i++){
         if(cart1->lineCartBooleanArray[i]){
             free(cart1->lineCartArray[i]);
         }
@@ -39,13 +39,12 @@ void freeCart(Cart* cart1){
 }
 
 void addToCart(Cart* cart1, Appliance* appliance1){
-    int maxCapacity = sizeof(cart1->lineCartArray)/ sizeof(LineCart);
     int hasInserted=0;
     if(appliance1->invoiceLineArray->quantity==0){
         askForAppliances(appliance1->provider,appliance1->invoiceLineArray);
     }
     int i;
-    for(i=0;i<maxCapacity;i++){
+    for(i=0;i<cart1->maxCapacity;i++){
         if(cart1->lineCartBooleanArray[i]==1) {
             if(compareTo(cart1->lineCartArray[i]->appliance1,appliance1)==0){
                 cart1->lineCartArray[i]->quantity++;
@@ -66,18 +65,18 @@ void addToCart(Cart* cart1, Appliance* appliance1){
 }
 
 void growCart(Cart* cart1){
-    int maxCapacity = sizeof(cart1->lineCartArray)/ sizeof(LineCart);
-    cart1->lineCartArray = realloc(cart1->lineCartArray, sizeof(LineCart)*maxCapacity*2);
-    cart1->lineCartBooleanArray=realloc(cart1->lineCartBooleanArray, sizeof(int)*maxCapacity*2);
+    cart1->lineCartArray = realloc(cart1->lineCartArray, sizeof(LineCart)*cart1->maxCapacity*2);
+    cart1->lineCartBooleanArray=realloc(cart1->lineCartBooleanArray, sizeof(int)*cart1->maxCapacity*2);
+    cart1->maxCapacity=cart1->maxCapacity*2;
 }
 
 Appliance* erraseAppliance(Cart* cart1, Appliance* appliance1){
-    int maxCapacity = sizeof(cart1->lineCartArray)/ sizeof(LineCart);
     int i;
-    for(i=0;i<maxCapacity;i++){
+    for(i=0;i<cart1->maxCapacity;i++){
         if(cart1->lineCartBooleanArray[i]){
             if(compareTo(cart1->lineCartArray[i]->appliance1,appliance1)){
                 cart1->lineCartArray[i]->quantity--;
+                cart1->total-=cart1->lineCartArray[i]->appliance1->price*cart1->lineCartArray[i]->appliance1->discount;
                 if(cart1->lineCartArray[i]->quantity==0){
                     cart1->lineCartBooleanArray[i]=0;
                 }

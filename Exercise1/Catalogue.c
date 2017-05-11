@@ -15,6 +15,7 @@ Catalogue* newCatalogue(char* id,char* name, double discount){
     catalogue1->discount=discount;
     catalogue1->applianceArray = malloc(sizeof(Appliance)*10);
     catalogue1->applianceBooleanArray = malloc(sizeof(int)*10);
+    catalogue1->maxCapacity=10;
 
     strcpy(catalogue1->id,id);
     strcpy(catalogue1->name,name);
@@ -22,9 +23,8 @@ Catalogue* newCatalogue(char* id,char* name, double discount){
 }
 
 void freeCatalogue(Catalogue* catalogue1){
-    int maxCapacity = sizeof(catalogue1->applianceArray)/ sizeof(Appliance);
     int i;
-    for (i = 0; i <maxCapacity; i++) {
+    for (i = 0; i <catalogue1->maxCapacity; i++) {
         if(catalogue1->applianceBooleanArray[i]==1){
             freeAppliance(catalogue1->applianceArray[i]);
         }
@@ -37,10 +37,9 @@ void freeCatalogue(Catalogue* catalogue1){
 }
 
 void addAppliance(Catalogue* catalogue1,Appliance* appliance1){
-    int maxCapacity = sizeof(catalogue1->applianceArray)/ sizeof(Appliance);
     int hasInserted=0;
     int i;
-    for(i=0;i<maxCapacity;i++){
+    for(i=0;i<catalogue1->maxCapacity;i++){
         if(catalogue1->applianceBooleanArray[i]==0) {
             catalogue1->applianceArray[i] = appliance1;
             catalogue1->applianceBooleanArray[i] = 1;
@@ -56,15 +55,14 @@ void addAppliance(Catalogue* catalogue1,Appliance* appliance1){
 }
 
 void growCatalogue(Catalogue* catalogue1){
-    int maxCapacity = sizeof(catalogue1->applianceArray)/ sizeof(Appliance);
-    catalogue1->applianceArray = realloc(catalogue1->applianceArray, sizeof(Appliance)*maxCapacity*2);
-    catalogue1->applianceBooleanArray=realloc(catalogue1->applianceBooleanArray, sizeof(int)*maxCapacity*2);
+    catalogue1->applianceArray = realloc(catalogue1->applianceArray, sizeof(Appliance)*catalogue1->maxCapacity*2);
+    catalogue1->applianceBooleanArray=realloc(catalogue1->applianceBooleanArray, sizeof(int)*catalogue1->maxCapacity*2);
+    catalogue1->maxCapacity = catalogue1->maxCapacity*2;
 }
 
 Appliance* removeAppliance(Catalogue* catalogue1,Appliance* appliance1){
-    int maxCapacity = sizeof(catalogue1->applianceArray)/ sizeof(Appliance);
     int i;
-    for(i=0;i<maxCapacity;i++){
+    for(i=0;i<catalogue1->maxCapacity;i++){
         if(catalogue1->applianceBooleanArray[i]==1){
             if(compareTo(catalogue1->applianceArray[i],appliance1)==1){
                 catalogue1->applianceBooleanArray[i]=0;
