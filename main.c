@@ -14,4 +14,20 @@ int main() {
     addAppliance(phones,newAppliance("iphone7","plus",10000,phones->discount,applePoint));
     addAppliance(phones,newAppliance("galaxy","edge",8000,phones->discount,garbarino));
 
+    printf("%d",1);
+    printf("%s",phones->name);
+    scanf(" %c", "Choose an option: ");
+
+}
+
+void printCatalogue(Catalogue* catalogue1){
+    int maxCapacity = sizeof(catalogue1->applianceArray)/ sizeof(Appliance);
+    int counter=1;
+    for(int i=0;i<maxCapacity;i++){
+        if(catalogue1->applianceBooleanArray[i]==1){
+            printf("%d",counter);
+            printf("%s\n",catalogue1->applianceArray[i]->name);
+            counter++;
+        }
+    }
 }

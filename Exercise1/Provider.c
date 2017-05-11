@@ -40,10 +40,10 @@ void freeProvider(Provider* provider){
     free(provider);
 }
 
-void askForAppliance(Provider* provider1,LineCart* lineCart1){
+void askForAppliances(Provider* provider1,InvoiceLine* invoiceLine1){
     if(provider1->appliancesQuantity==0){
         createAppliance(provider1->manufacturer,provider1,15);
     }
     provider1->appliancesQuantity-=5;
-    lineCart1->quantity+=10;
+    invoiceLine1->quantity+=10;
 }

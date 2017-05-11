@@ -33,6 +33,9 @@ void freeCart(Cart* cart1){
 void addAppliance(Cart* cart1, Appliance* appliance1){
     int maxCapacity = sizeof(cart1->lineCartArray)/ sizeof(LineCart);
     int hasInserted=0;
+    if(appliance1->invoiceLineArray->quantity==0){
+        askForAppliances(appliance1->provider,appliance1->invoiceLineArray);
+    }
     for(int i=0;i<maxCapacity;i++){
         if(cart1->lineCartBooleanArray[i]==1) {
             if(compareTo(cart1->lineCartArray[i]->appliance1,appliance1)==0){

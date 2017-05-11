@@ -5,10 +5,9 @@
 #ifndef TPCUATRIMESTRAL_CART_H
 #define TPCUATRIMESTRAL_CART_H
 
-#include "LineCart.h"
-#include "Appliance.h"
-#include "Invoice.h"
-
+typedef struct lineCart LineCart;
+typedef struct appliance Appliance;
+typedef struct invoice Invoice;
 typedef struct cart Cart;
 struct cart{
     char* id;

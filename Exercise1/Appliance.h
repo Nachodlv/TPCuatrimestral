@@ -2,10 +2,9 @@
 #ifndef TPCUATRIMESTRAL_APPLIANCE_H
 #define TPCUATRIMESTRAL_APPLIANCE_H
 
-#include "InvoiceLine.h"
-#include "Provider.h"
-#include "Label.h"
-
+typedef struct invoiceLine InvoiceLine;
+typedef struct provider Provider;
+typedef struct label Label;
 typedef struct appliance Appliance;
 struct appliance{
     char* name;
