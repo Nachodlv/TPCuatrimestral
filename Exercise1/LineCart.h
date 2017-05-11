@@ -5,8 +5,8 @@
 #ifndef TPCUATRIMESTRAL_LINECART_H
 #define TPCUATRIMESTRAL_LINECART_H
 
-#include "Appliance.h"
 
+typedef struct appliance Appliance;
 typedef struct lineCart LineCart;
 struct lineCart{
     char* id;

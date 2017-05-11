@@ -5,7 +5,7 @@
 #ifndef TPCUATRIMESTRAL_CATALOGUE_H
 #define TPCUATRIMESTRAL_CATALOGUE_H
 
-#include "Appliance.h"
+typedef struct appliance Appliance;
 typedef struct catalogue Catalogue;
 struct catalogue{
     char* id;
