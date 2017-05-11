@@ -1,6 +1,7 @@
 
-#include <malloc.h>
-#include <mem.h>
+
+#include <stdlib.h>
+#include <memory.h>
 #include "Appliance.h"
 Appliance* newAppliance(char* name, char* model, double price, double discount, Provider* provider1){
     Appliance* appliance = malloc(sizeof(Appliance));
