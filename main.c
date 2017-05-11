@@ -5,6 +5,7 @@
 #include "Exercise1/Appliance.h"
 
 //timepo estimado: 2:15 horas + 30min
+void printCatalogue(Catalogue* catalogue1);
 int main() {
     Manufacturer* apple = newManufacturer("Apple","we are the best","apple st","California","1298766789","www.apple.com");
     Manufacturer* samsung = newManufacturer("Samsung","we are the best","samsung st","California","1298766789","www.samsung.com");
@@ -17,10 +18,14 @@ int main() {
     addAppliance(phones,newAppliance("iphone7","plus",10000,phones->discount,applePoint));
     addAppliance(phones,newAppliance("galaxy","edge",8000,phones->discount,garbarino));
 
+    printCatalogue(phones);
     printf("%d",1);
     printf("%s",phones->name);
     char a;
-    scanf(" %lf",a );
+    scanf(" %c",&a );
+    perror("Error");
+    char b;
+    scanf(" %c",&b );
     return 0;
 }
 
