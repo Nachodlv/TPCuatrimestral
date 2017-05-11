@@ -22,5 +22,6 @@ struct provider{
 Provider* newProvider(char* name, char* description, char* direction, char*city, char* phone, char* web, Manufacturer* manufacturer);
 void freeProvider(Provider* provider);
 void askForAppliances(Provider* provider1, InvoiceLine* invoiceLine1);
+void setSpaceForProvider(Provider* provider1,Manufacturer* manufacturer1);
 
 #endif //TPCUATRIMESTRAL_PROVIDER_H
