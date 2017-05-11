@@ -2,8 +2,8 @@
 // Created by Ignacio on 10/5/2017.
 //
 
-#include <malloc.h>
-#include <mem.h>
+#include <stdlib.h>
+#include <memory.h>
 #include "Invoice.h"
 Invoice* newInvoice(char* id, double toPay){
     Invoice* invoice1 = malloc(sizeof(Invoice));

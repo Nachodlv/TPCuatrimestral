@@ -2,8 +2,9 @@
 // Created by Ignacio on 10/5/2017.
 //
 
-#include <malloc.h>
-#include <mem.h>
+
+#include <stdlib.h>
+#include <memory.h>
 #include "LineCart.h"
 LineCart* newLineCart(char* id, Appliance* appliance1){
     LineCart* lineCart1 = malloc(sizeof(lineCart1));

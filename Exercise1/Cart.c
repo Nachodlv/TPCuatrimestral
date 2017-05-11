@@ -2,8 +2,9 @@
 // Created by Ignacio on 10/5/2017.
 //
 
-#include <malloc.h>
-#include <mem.h>
+
+#include <stdlib.h>
+#include <memory.h>
 #include "Cart.h"
 Cart* newCart(char* id){
     Cart* cart1 = malloc(sizeof(Cart));

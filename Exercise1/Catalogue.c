@@ -2,8 +2,9 @@
 // Created by Ignacio on 10/5/2017.
 //
 
-#include <malloc.h>
-#include <mem.h>
+
+#include <stdlib.h>
+#include <memory.h>
 #include "Catalogue.h"
 Catalogue* newCatalogue(char* id,char* name, double discount){
     Catalogue* catalogue1 = malloc(sizeof(Catalogue));

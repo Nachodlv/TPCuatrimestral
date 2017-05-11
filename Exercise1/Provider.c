@@ -2,20 +2,21 @@
 // Created by Ignacio on 10/5/2017.
 //
 
-#include <malloc.h>
-#include <mem.h>
+
+#include <stdlib.h>
+#include <memory.h>
 #include "Provider.h"
 #include "Appliance.h"
 
 Provider* newProvider(char* name, char* description, char* direction, char*city, char* phone, char* web, Manufacturer* manufacturer){
     Provider* provider = malloc(sizeof(provider));
     provider->appliancesQuantity=0;
-    provider->city=malloc(sizeof(strlen(city)));
-    provider->name=malloc(sizeof(strlen(name)));
-    provider->description=malloc(sizeof(strlen(description)));
-    provider->direction=malloc(sizeof(strlen(direction)));
-    provider->phone=malloc(sizeof(strlen(phone)));
-    provider->web=malloc(sizeof(strlen(web)));
+    provider->city=malloc(sizeof(city));
+    provider->name=malloc(sizeof(name));
+    provider->description=malloc(sizeof(description));
+    provider->direction=malloc(sizeof(direction));
+    provider->phone=malloc(sizeof(phone));
+    provider->web=malloc(sizeof(web));
     provider->manufacturer=manufacturer;
 
     strcpy(provider->city,city);

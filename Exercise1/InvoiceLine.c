@@ -2,8 +2,9 @@
 // Created by Ignacio on 10/5/2017.
 //
 
-#include <malloc.h>
-#include <mem.h>
+
+#include <stdlib.h>
+#include <memory.h>
 #include "InvoiceLine.h"
 InvoiceLine* newInvoiceLine(char* id, char* article){
     InvoiceLine* invoiceLine1 = malloc(sizeof(InvoiceLine));
