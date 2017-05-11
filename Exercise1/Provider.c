@@ -7,6 +7,8 @@
 #include <memory.h>
 #include "Provider.h"
 #include "Appliance.h"
+#include "Manufacturer.h"
+#include "InvoiceLine.h"
 
 Provider* newProvider(char* name, char* description, char* direction, char*city, char* phone, char* web, Manufacturer* manufacturer){
     Provider* provider = malloc(sizeof(provider));

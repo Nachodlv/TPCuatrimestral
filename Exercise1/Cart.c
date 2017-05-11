@@ -6,6 +6,13 @@
 #include <stdlib.h>
 #include <memory.h>
 #include "Cart.h"
+#include "Provider.h"
+#include "Appliance.h"
+#include "Invoice.h"
+#include "LineCart.h"
+#include "InvoiceLine.h"
+#include "Label.h"
+
 Cart* newCart(char* id){
     Cart* cart1 = malloc(sizeof(Cart));
     cart1->total=0;
@@ -19,7 +26,8 @@ Cart* newCart(char* id){
 
 void freeCart(Cart* cart1){
     int maxCapacity = sizeof(cart1->lineCartArray)/ sizeof(LineCart);
-    for(int i=0;i<maxCapacity;i++){
+    int i;
+    for(i=0;i<maxCapacity;i++){
         if(cart1->lineCartBooleanArray[i]){
             free(cart1->lineCartArray[i]);
         }
@@ -30,13 +38,14 @@ void freeCart(Cart* cart1){
     free(cart1);
 }
 
-void addAppliance(Cart* cart1, Appliance* appliance1){
+void addToCart(Cart* cart1, Appliance* appliance1){
     int maxCapacity = sizeof(cart1->lineCartArray)/ sizeof(LineCart);
     int hasInserted=0;
     if(appliance1->invoiceLineArray->quantity==0){
         askForAppliances(appliance1->provider,appliance1->invoiceLineArray);
     }
-    for(int i=0;i<maxCapacity;i++){
+    int i;
+    for(i=0;i<maxCapacity;i++){
         if(cart1->lineCartBooleanArray[i]==1) {
             if(compareTo(cart1->lineCartArray[i]->appliance1,appliance1)==0){
                 cart1->lineCartArray[i]->quantity++;
@@ -51,12 +60,12 @@ void addAppliance(Cart* cart1, Appliance* appliance1){
         }
     }
     if(!hasInserted){
-        grow(cart1);
-        addAppliance(cart1,appliance1);
+        growCart(cart1);
+        addToCart(cart1,appliance1);
     }
 }
 
-void grow(Cart* cart1){
+void growCart(Cart* cart1){
     int maxCapacity = sizeof(cart1->lineCartArray)/ sizeof(LineCart);
     cart1->lineCartArray = realloc(cart1->lineCartArray, sizeof(LineCart)*maxCapacity*2);
     cart1->lineCartBooleanArray=realloc(cart1->lineCartBooleanArray, sizeof(int)*maxCapacity*2);
@@ -64,7 +73,8 @@ void grow(Cart* cart1){
 
 Appliance* erraseAppliance(Cart* cart1, Appliance* appliance1){
     int maxCapacity = sizeof(cart1->lineCartArray)/ sizeof(LineCart);
-    for(int i=0;i<maxCapacity;i++){
+    int i;
+    for(i=0;i<maxCapacity;i++){
         if(cart1->lineCartBooleanArray[i]){
             if(compareTo(cart1->lineCartArray[i]->appliance1,appliance1)){
                 cart1->lineCartArray[i]->quantity--;

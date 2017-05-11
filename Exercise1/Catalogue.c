@@ -6,6 +6,8 @@
 #include <stdlib.h>
 #include <memory.h>
 #include "Catalogue.h"
+#include "Appliance.h"
+
 Catalogue* newCatalogue(char* id,char* name, double discount){
     Catalogue* catalogue1 = malloc(sizeof(Catalogue));
     catalogue1->id = malloc(sizeof(id));
@@ -21,7 +23,8 @@ Catalogue* newCatalogue(char* id,char* name, double discount){
 
 void freeCatalogue(Catalogue* catalogue1){
     int maxCapacity = sizeof(catalogue1->applianceArray)/ sizeof(Appliance);
-    for (int i = 0; i <maxCapacity; i++) {
+    int i;
+    for (i = 0; i <maxCapacity; i++) {
         if(catalogue1->applianceBooleanArray[i]==1){
             freeAppliance(catalogue1->applianceArray[i]);
         }
@@ -36,7 +39,8 @@ void freeCatalogue(Catalogue* catalogue1){
 void addAppliance(Catalogue* catalogue1,Appliance* appliance1){
     int maxCapacity = sizeof(catalogue1->applianceArray)/ sizeof(Appliance);
     int hasInserted=0;
-    for(int i=0;i<maxCapacity;i++){
+    int i;
+    for(i=0;i<maxCapacity;i++){
         if(catalogue1->applianceBooleanArray[i]==0) {
             catalogue1->applianceArray[i] = appliance1;
             catalogue1->applianceBooleanArray[i] = 1;
@@ -44,13 +48,14 @@ void addAppliance(Catalogue* catalogue1,Appliance* appliance1){
             break;
         }
     }
-    if(!hasInserted){
-        grow(catalogue1);
+    if(hasInserted==0){
+        growCatalogue(catalogue1);
         addAppliance(catalogue1,appliance1);
+        return;
     }
 }
 
-void grow(Catalogue* catalogue1){
+void growCatalogue(Catalogue* catalogue1){
     int maxCapacity = sizeof(catalogue1->applianceArray)/ sizeof(Appliance);
     catalogue1->applianceArray = realloc(catalogue1->applianceArray, sizeof(Appliance)*maxCapacity*2);
     catalogue1->applianceBooleanArray=realloc(catalogue1->applianceBooleanArray, sizeof(int)*maxCapacity*2);
@@ -58,7 +63,8 @@ void grow(Catalogue* catalogue1){
 
 Appliance* removeAppliance(Catalogue* catalogue1,Appliance* appliance1){
     int maxCapacity = sizeof(catalogue1->applianceArray)/ sizeof(Appliance);
-    for(int i=0;i<maxCapacity;i++){
+    int i;
+    for(i=0;i<maxCapacity;i++){
         if(catalogue1->applianceBooleanArray[i]==1){
             if(compareTo(catalogue1->applianceArray[i],appliance1)==1){
                 catalogue1->applianceBooleanArray[i]=0;

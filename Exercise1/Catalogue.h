@@ -19,5 +19,5 @@ Catalogue* newCatalogue(char* id,char* name, double discount);
 void freeCatalogue(Catalogue* catalogue1);
 void addAppliance(Catalogue* catalogue1,Appliance* appliance1);
 Appliance* removeAppliance(Catalogue* catalogue1, Appliance* appliance1);
-void grow(Catalogue* catalogue1);
+void growCatalogue(Catalogue* catalogue1);
 #endif //TPCUATRIMESTRAL_CATALOGUE_H

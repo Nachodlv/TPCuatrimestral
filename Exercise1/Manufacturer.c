@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <memory.h>
 #include "Manufacturer.h"
+#include "Provider.h"
 
 Manufacturer* newManufacturer(char* name, char* description, char* direction, char*city, char* phone, char* web){
     Manufacturer* manufacturer = malloc(sizeof(manufacturer));

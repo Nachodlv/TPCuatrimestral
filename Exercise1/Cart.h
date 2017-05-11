@@ -18,8 +18,8 @@ struct cart{
 
 Cart* newCart(char* id);
 void freeCart(Cart* cart1);
-void addAppliance(Cart* cart1,Appliance* appliance1);
+void addToCart(Cart* cart1,Appliance* appliance1);
 Appliance* erraseAppliance(Cart* cart1,Appliance* appliance1);
 Invoice* finishShopping(Cart* cart);
-void grow(Cart* cart1);
+void growCart(Cart* cart1);
 #endif //TPCUATRIMESTRAL_CART_H

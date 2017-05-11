@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include "Exercise1/Provider.h"
 #include "Exercise1/Catalogue.h"
+#include "Exercise1/Manufacturer.h"
+#include "Exercise1/Appliance.h"
+
 //timepo estimado: 2:15 horas + 30min
 int main() {
     Manufacturer* apple = newManufacturer("Apple","we are the best","apple st","California","1298766789","www.apple.com");
@@ -17,13 +20,14 @@ int main() {
     printf("%d",1);
     printf("%s",phones->name);
     scanf(" %c", "Choose an option: ");
-
+    return 0;
 }
 
 void printCatalogue(Catalogue* catalogue1){
     int maxCapacity = sizeof(catalogue1->applianceArray)/ sizeof(Appliance);
     int counter=1;
-    for(int i=0;i<maxCapacity;i++){
+    int i;
+    for(i=0;i<maxCapacity;i++){
         if(catalogue1->applianceBooleanArray[i]==1){
             printf("%d",counter);
             printf("%s\n",catalogue1->applianceArray[i]->name);

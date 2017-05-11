@@ -6,6 +6,8 @@
 #include <stdlib.h>
 #include <memory.h>
 #include "LineCart.h"
+#include "Appliance.h"
+
 LineCart* newLineCart(char* id, Appliance* appliance1){
     LineCart* lineCart1 = malloc(sizeof(lineCart1));
     lineCart1->id=malloc(sizeof(id));
