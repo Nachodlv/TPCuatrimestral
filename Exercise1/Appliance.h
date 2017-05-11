@@ -19,5 +19,4 @@ Appliance* newAppliance(char* name, char* model, double price, double discount, 
 void freeAppliance(Appliance* appliance);
 char* generateId(char* name, char* model);
 int compareTo(Appliance* appliance1,Appliance* appliance2);
-void generateSpaceForAppliance(Appliance* appliance1,Provider* provider1);
 #endif //TPCUATRIMESTRAL_APPLIANCE_H

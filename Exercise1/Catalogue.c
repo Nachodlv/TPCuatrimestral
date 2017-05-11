@@ -16,8 +16,8 @@ Catalogue* newCatalogue(char* id,char* name, double discount){
     catalogue1->applianceArray = malloc(sizeof(Appliance)*10);
     catalogue1->applianceBooleanArray = malloc(sizeof(int)*10);
     catalogue1->maxCapacity=10;
-    int i;
-    for(i=0;i<catalogue1->maxCapacity;i++){
+    //int i;
+    for(int i=0;i<catalogue1->maxCapacity;i++){
         catalogue1->applianceBooleanArray[i]=0;
     }
 
@@ -41,9 +41,10 @@ void freeCatalogue(Catalogue* catalogue1){
 }
 
 void addAppliance(Catalogue* catalogue1,Appliance* appliance1){
+    int maxCapacity = sizeof(catalogue1->applianceBooleanArray)/ sizeof(int);
     int hasInserted=0;
-    int i;
-    for(i=0;i<catalogue1->maxCapacity;i++){
+   // int i;
+    for(int i=0;i<catalogue1->maxCapacity;i++){
         if(catalogue1->applianceBooleanArray[i]==0) {
             catalogue1->applianceArray[i] = appliance1;
             catalogue1->applianceBooleanArray[i] = 1;
