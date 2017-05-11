@@ -82,6 +82,60 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Ignacio/Dropbox/Facultad/AyED/TPCuatrimestral/Exercise1/Appliance.c">
+			<Option target="TPCuatrimestral"/>
+		</Unit>
+		<Unit filename="C:/Users/Ignacio/Dropbox/Facultad/AyED/TPCuatrimestral/Exercise1/Appliance.h">
+			<Option target="TPCuatrimestral"/>
+		</Unit>
+		<Unit filename="C:/Users/Ignacio/Dropbox/Facultad/AyED/TPCuatrimestral/Exercise1/Cart.c">
+			<Option target="TPCuatrimestral"/>
+		</Unit>
+		<Unit filename="C:/Users/Ignacio/Dropbox/Facultad/AyED/TPCuatrimestral/Exercise1/Cart.h">
+			<Option target="TPCuatrimestral"/>
+		</Unit>
+		<Unit filename="C:/Users/Ignacio/Dropbox/Facultad/AyED/TPCuatrimestral/Exercise1/Catalogue.c">
+			<Option target="TPCuatrimestral"/>
+		</Unit>
+		<Unit filename="C:/Users/Ignacio/Dropbox/Facultad/AyED/TPCuatrimestral/Exercise1/Catalogue.h">
+			<Option target="TPCuatrimestral"/>
+		</Unit>
+		<Unit filename="C:/Users/Ignacio/Dropbox/Facultad/AyED/TPCuatrimestral/Exercise1/Invoice.c">
+			<Option target="TPCuatrimestral"/>
+		</Unit>
+		<Unit filename="C:/Users/Ignacio/Dropbox/Facultad/AyED/TPCuatrimestral/Exercise1/Invoice.h">
+			<Option target="TPCuatrimestral"/>
+		</Unit>
+		<Unit filename="C:/Users/Ignacio/Dropbox/Facultad/AyED/TPCuatrimestral/Exercise1/InvoiceLine.c">
+			<Option target="TPCuatrimestral"/>
+		</Unit>
+		<Unit filename="C:/Users/Ignacio/Dropbox/Facultad/AyED/TPCuatrimestral/Exercise1/InvoiceLine.h">
+			<Option target="TPCuatrimestral"/>
+		</Unit>
+		<Unit filename="C:/Users/Ignacio/Dropbox/Facultad/AyED/TPCuatrimestral/Exercise1/Label.c">
+			<Option target="TPCuatrimestral"/>
+		</Unit>
+		<Unit filename="C:/Users/Ignacio/Dropbox/Facultad/AyED/TPCuatrimestral/Exercise1/Label.h">
+			<Option target="TPCuatrimestral"/>
+		</Unit>
+		<Unit filename="C:/Users/Ignacio/Dropbox/Facultad/AyED/TPCuatrimestral/Exercise1/LineCart.c">
+			<Option target="TPCuatrimestral"/>
+		</Unit>
+		<Unit filename="C:/Users/Ignacio/Dropbox/Facultad/AyED/TPCuatrimestral/Exercise1/LineCart.h">
+			<Option target="TPCuatrimestral"/>
+		</Unit>
+		<Unit filename="C:/Users/Ignacio/Dropbox/Facultad/AyED/TPCuatrimestral/Exercise1/Manufacturer.c">
+			<Option target="TPCuatrimestral"/>
+		</Unit>
+		<Unit filename="C:/Users/Ignacio/Dropbox/Facultad/AyED/TPCuatrimestral/Exercise1/Manufacturer.h">
+			<Option target="TPCuatrimestral"/>
+		</Unit>
+		<Unit filename="C:/Users/Ignacio/Dropbox/Facultad/AyED/TPCuatrimestral/Exercise1/Provider.c">
+			<Option target="TPCuatrimestral"/>
+		</Unit>
+		<Unit filename="C:/Users/Ignacio/Dropbox/Facultad/AyED/TPCuatrimestral/Exercise1/Provider.h">
+			<Option target="TPCuatrimestral"/>
+		</Unit>
 		<Unit filename="C:/Users/Ignacio/Dropbox/Facultad/AyED/TPCuatrimestral/main.c">
 			<Option target="TPCuatrimestral"/>
 		</Unit>

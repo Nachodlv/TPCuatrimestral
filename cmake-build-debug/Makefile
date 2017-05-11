@@ -122,6 +122,249 @@ TPCuatrimestral/fast:
 	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/build
 .PHONY : TPCuatrimestral/fast
 
+Exercise1/Appliance.obj: Exercise1/Appliance.c.obj
+
+.PHONY : Exercise1/Appliance.obj
+
+# target to build an object file
+Exercise1/Appliance.c.obj:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Appliance.c.obj
+.PHONY : Exercise1/Appliance.c.obj
+
+Exercise1/Appliance.i: Exercise1/Appliance.c.i
+
+.PHONY : Exercise1/Appliance.i
+
+# target to preprocess a source file
+Exercise1/Appliance.c.i:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Appliance.c.i
+.PHONY : Exercise1/Appliance.c.i
+
+Exercise1/Appliance.s: Exercise1/Appliance.c.s
+
+.PHONY : Exercise1/Appliance.s
+
+# target to generate assembly for a file
+Exercise1/Appliance.c.s:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Appliance.c.s
+.PHONY : Exercise1/Appliance.c.s
+
+Exercise1/Cart.obj: Exercise1/Cart.c.obj
+
+.PHONY : Exercise1/Cart.obj
+
+# target to build an object file
+Exercise1/Cart.c.obj:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Cart.c.obj
+.PHONY : Exercise1/Cart.c.obj
+
+Exercise1/Cart.i: Exercise1/Cart.c.i
+
+.PHONY : Exercise1/Cart.i
+
+# target to preprocess a source file
+Exercise1/Cart.c.i:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Cart.c.i
+.PHONY : Exercise1/Cart.c.i
+
+Exercise1/Cart.s: Exercise1/Cart.c.s
+
+.PHONY : Exercise1/Cart.s
+
+# target to generate assembly for a file
+Exercise1/Cart.c.s:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Cart.c.s
+.PHONY : Exercise1/Cart.c.s
+
+Exercise1/Catalogue.obj: Exercise1/Catalogue.c.obj
+
+.PHONY : Exercise1/Catalogue.obj
+
+# target to build an object file
+Exercise1/Catalogue.c.obj:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Catalogue.c.obj
+.PHONY : Exercise1/Catalogue.c.obj
+
+Exercise1/Catalogue.i: Exercise1/Catalogue.c.i
+
+.PHONY : Exercise1/Catalogue.i
+
+# target to preprocess a source file
+Exercise1/Catalogue.c.i:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Catalogue.c.i
+.PHONY : Exercise1/Catalogue.c.i
+
+Exercise1/Catalogue.s: Exercise1/Catalogue.c.s
+
+.PHONY : Exercise1/Catalogue.s
+
+# target to generate assembly for a file
+Exercise1/Catalogue.c.s:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Catalogue.c.s
+.PHONY : Exercise1/Catalogue.c.s
+
+Exercise1/Invoice.obj: Exercise1/Invoice.c.obj
+
+.PHONY : Exercise1/Invoice.obj
+
+# target to build an object file
+Exercise1/Invoice.c.obj:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Invoice.c.obj
+.PHONY : Exercise1/Invoice.c.obj
+
+Exercise1/Invoice.i: Exercise1/Invoice.c.i
+
+.PHONY : Exercise1/Invoice.i
+
+# target to preprocess a source file
+Exercise1/Invoice.c.i:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Invoice.c.i
+.PHONY : Exercise1/Invoice.c.i
+
+Exercise1/Invoice.s: Exercise1/Invoice.c.s
+
+.PHONY : Exercise1/Invoice.s
+
+# target to generate assembly for a file
+Exercise1/Invoice.c.s:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Invoice.c.s
+.PHONY : Exercise1/Invoice.c.s
+
+Exercise1/InvoiceLine.obj: Exercise1/InvoiceLine.c.obj
+
+.PHONY : Exercise1/InvoiceLine.obj
+
+# target to build an object file
+Exercise1/InvoiceLine.c.obj:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/InvoiceLine.c.obj
+.PHONY : Exercise1/InvoiceLine.c.obj
+
+Exercise1/InvoiceLine.i: Exercise1/InvoiceLine.c.i
+
+.PHONY : Exercise1/InvoiceLine.i
+
+# target to preprocess a source file
+Exercise1/InvoiceLine.c.i:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/InvoiceLine.c.i
+.PHONY : Exercise1/InvoiceLine.c.i
+
+Exercise1/InvoiceLine.s: Exercise1/InvoiceLine.c.s
+
+.PHONY : Exercise1/InvoiceLine.s
+
+# target to generate assembly for a file
+Exercise1/InvoiceLine.c.s:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/InvoiceLine.c.s
+.PHONY : Exercise1/InvoiceLine.c.s
+
+Exercise1/Label.obj: Exercise1/Label.c.obj
+
+.PHONY : Exercise1/Label.obj
+
+# target to build an object file
+Exercise1/Label.c.obj:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Label.c.obj
+.PHONY : Exercise1/Label.c.obj
+
+Exercise1/Label.i: Exercise1/Label.c.i
+
+.PHONY : Exercise1/Label.i
+
+# target to preprocess a source file
+Exercise1/Label.c.i:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Label.c.i
+.PHONY : Exercise1/Label.c.i
+
+Exercise1/Label.s: Exercise1/Label.c.s
+
+.PHONY : Exercise1/Label.s
+
+# target to generate assembly for a file
+Exercise1/Label.c.s:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Label.c.s
+.PHONY : Exercise1/Label.c.s
+
+Exercise1/LineCart.obj: Exercise1/LineCart.c.obj
+
+.PHONY : Exercise1/LineCart.obj
+
+# target to build an object file
+Exercise1/LineCart.c.obj:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/LineCart.c.obj
+.PHONY : Exercise1/LineCart.c.obj
+
+Exercise1/LineCart.i: Exercise1/LineCart.c.i
+
+.PHONY : Exercise1/LineCart.i
+
+# target to preprocess a source file
+Exercise1/LineCart.c.i:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/LineCart.c.i
+.PHONY : Exercise1/LineCart.c.i
+
+Exercise1/LineCart.s: Exercise1/LineCart.c.s
+
+.PHONY : Exercise1/LineCart.s
+
+# target to generate assembly for a file
+Exercise1/LineCart.c.s:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/LineCart.c.s
+.PHONY : Exercise1/LineCart.c.s
+
+Exercise1/Manufacturer.obj: Exercise1/Manufacturer.c.obj
+
+.PHONY : Exercise1/Manufacturer.obj
+
+# target to build an object file
+Exercise1/Manufacturer.c.obj:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Manufacturer.c.obj
+.PHONY : Exercise1/Manufacturer.c.obj
+
+Exercise1/Manufacturer.i: Exercise1/Manufacturer.c.i
+
+.PHONY : Exercise1/Manufacturer.i
+
+# target to preprocess a source file
+Exercise1/Manufacturer.c.i:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Manufacturer.c.i
+.PHONY : Exercise1/Manufacturer.c.i
+
+Exercise1/Manufacturer.s: Exercise1/Manufacturer.c.s
+
+.PHONY : Exercise1/Manufacturer.s
+
+# target to generate assembly for a file
+Exercise1/Manufacturer.c.s:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Manufacturer.c.s
+.PHONY : Exercise1/Manufacturer.c.s
+
+Exercise1/Provider.obj: Exercise1/Provider.c.obj
+
+.PHONY : Exercise1/Provider.obj
+
+# target to build an object file
+Exercise1/Provider.c.obj:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Provider.c.obj
+.PHONY : Exercise1/Provider.c.obj
+
+Exercise1/Provider.i: Exercise1/Provider.c.i
+
+.PHONY : Exercise1/Provider.i
+
+# target to preprocess a source file
+Exercise1/Provider.c.i:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Provider.c.i
+.PHONY : Exercise1/Provider.c.i
+
+Exercise1/Provider.s: Exercise1/Provider.c.s
+
+.PHONY : Exercise1/Provider.s
+
+# target to generate assembly for a file
+Exercise1/Provider.c.s:
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Provider.c.s
+.PHONY : Exercise1/Provider.c.s
+
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -158,6 +401,33 @@ help:
 	@echo ... TPCuatrimestral
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Exercise1/Appliance.obj
+	@echo ... Exercise1/Appliance.i
+	@echo ... Exercise1/Appliance.s
+	@echo ... Exercise1/Cart.obj
+	@echo ... Exercise1/Cart.i
+	@echo ... Exercise1/Cart.s
+	@echo ... Exercise1/Catalogue.obj
+	@echo ... Exercise1/Catalogue.i
+	@echo ... Exercise1/Catalogue.s
+	@echo ... Exercise1/Invoice.obj
+	@echo ... Exercise1/Invoice.i
+	@echo ... Exercise1/Invoice.s
+	@echo ... Exercise1/InvoiceLine.obj
+	@echo ... Exercise1/InvoiceLine.i
+	@echo ... Exercise1/InvoiceLine.s
+	@echo ... Exercise1/Label.obj
+	@echo ... Exercise1/Label.i
+	@echo ... Exercise1/Label.s
+	@echo ... Exercise1/LineCart.obj
+	@echo ... Exercise1/LineCart.i
+	@echo ... Exercise1/LineCart.s
+	@echo ... Exercise1/Manufacturer.obj
+	@echo ... Exercise1/Manufacturer.i
+	@echo ... Exercise1/Manufacturer.s
+	@echo ... Exercise1/Provider.obj
+	@echo ... Exercise1/Provider.i
+	@echo ... Exercise1/Provider.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

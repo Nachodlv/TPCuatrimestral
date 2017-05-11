@@ -80,19 +80,253 @@ CMakeFiles/TPCuatrimestral.dir/main.c.obj.provides: CMakeFiles/TPCuatrimestral.d
 CMakeFiles/TPCuatrimestral.dir/main.c.obj.provides.build: CMakeFiles/TPCuatrimestral.dir/main.c.obj
 
 
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Appliance.c.obj: CMakeFiles/TPCuatrimestral.dir/flags.make
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Appliance.c.obj: ../Exercise1/Appliance.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/TPCuatrimestral.dir/Exercise1/Appliance.c.obj"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\TPCuatrimestral.dir\Exercise1\Appliance.c.obj   -c C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\Appliance.c
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Appliance.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TPCuatrimestral.dir/Exercise1/Appliance.c.i"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\Appliance.c > CMakeFiles\TPCuatrimestral.dir\Exercise1\Appliance.c.i
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Appliance.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TPCuatrimestral.dir/Exercise1/Appliance.c.s"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\Appliance.c -o CMakeFiles\TPCuatrimestral.dir\Exercise1\Appliance.c.s
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Appliance.c.obj.requires:
+
+.PHONY : CMakeFiles/TPCuatrimestral.dir/Exercise1/Appliance.c.obj.requires
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Appliance.c.obj.provides: CMakeFiles/TPCuatrimestral.dir/Exercise1/Appliance.c.obj.requires
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Appliance.c.obj.provides.build
+.PHONY : CMakeFiles/TPCuatrimestral.dir/Exercise1/Appliance.c.obj.provides
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Appliance.c.obj.provides.build: CMakeFiles/TPCuatrimestral.dir/Exercise1/Appliance.c.obj
+
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/InvoiceLine.c.obj: CMakeFiles/TPCuatrimestral.dir/flags.make
+CMakeFiles/TPCuatrimestral.dir/Exercise1/InvoiceLine.c.obj: ../Exercise1/InvoiceLine.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/TPCuatrimestral.dir/Exercise1/InvoiceLine.c.obj"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\TPCuatrimestral.dir\Exercise1\InvoiceLine.c.obj   -c C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\InvoiceLine.c
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/InvoiceLine.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TPCuatrimestral.dir/Exercise1/InvoiceLine.c.i"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\InvoiceLine.c > CMakeFiles\TPCuatrimestral.dir\Exercise1\InvoiceLine.c.i
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/InvoiceLine.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TPCuatrimestral.dir/Exercise1/InvoiceLine.c.s"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\InvoiceLine.c -o CMakeFiles\TPCuatrimestral.dir\Exercise1\InvoiceLine.c.s
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/InvoiceLine.c.obj.requires:
+
+.PHONY : CMakeFiles/TPCuatrimestral.dir/Exercise1/InvoiceLine.c.obj.requires
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/InvoiceLine.c.obj.provides: CMakeFiles/TPCuatrimestral.dir/Exercise1/InvoiceLine.c.obj.requires
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/InvoiceLine.c.obj.provides.build
+.PHONY : CMakeFiles/TPCuatrimestral.dir/Exercise1/InvoiceLine.c.obj.provides
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/InvoiceLine.c.obj.provides.build: CMakeFiles/TPCuatrimestral.dir/Exercise1/InvoiceLine.c.obj
+
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Provider.c.obj: CMakeFiles/TPCuatrimestral.dir/flags.make
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Provider.c.obj: ../Exercise1/Provider.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/TPCuatrimestral.dir/Exercise1/Provider.c.obj"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\TPCuatrimestral.dir\Exercise1\Provider.c.obj   -c C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\Provider.c
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Provider.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TPCuatrimestral.dir/Exercise1/Provider.c.i"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\Provider.c > CMakeFiles\TPCuatrimestral.dir\Exercise1\Provider.c.i
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Provider.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TPCuatrimestral.dir/Exercise1/Provider.c.s"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\Provider.c -o CMakeFiles\TPCuatrimestral.dir\Exercise1\Provider.c.s
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Provider.c.obj.requires:
+
+.PHONY : CMakeFiles/TPCuatrimestral.dir/Exercise1/Provider.c.obj.requires
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Provider.c.obj.provides: CMakeFiles/TPCuatrimestral.dir/Exercise1/Provider.c.obj.requires
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Provider.c.obj.provides.build
+.PHONY : CMakeFiles/TPCuatrimestral.dir/Exercise1/Provider.c.obj.provides
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Provider.c.obj.provides.build: CMakeFiles/TPCuatrimestral.dir/Exercise1/Provider.c.obj
+
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Manufacturer.c.obj: CMakeFiles/TPCuatrimestral.dir/flags.make
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Manufacturer.c.obj: ../Exercise1/Manufacturer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/TPCuatrimestral.dir/Exercise1/Manufacturer.c.obj"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\TPCuatrimestral.dir\Exercise1\Manufacturer.c.obj   -c C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\Manufacturer.c
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Manufacturer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TPCuatrimestral.dir/Exercise1/Manufacturer.c.i"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\Manufacturer.c > CMakeFiles\TPCuatrimestral.dir\Exercise1\Manufacturer.c.i
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Manufacturer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TPCuatrimestral.dir/Exercise1/Manufacturer.c.s"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\Manufacturer.c -o CMakeFiles\TPCuatrimestral.dir\Exercise1\Manufacturer.c.s
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Manufacturer.c.obj.requires:
+
+.PHONY : CMakeFiles/TPCuatrimestral.dir/Exercise1/Manufacturer.c.obj.requires
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Manufacturer.c.obj.provides: CMakeFiles/TPCuatrimestral.dir/Exercise1/Manufacturer.c.obj.requires
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Manufacturer.c.obj.provides.build
+.PHONY : CMakeFiles/TPCuatrimestral.dir/Exercise1/Manufacturer.c.obj.provides
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Manufacturer.c.obj.provides.build: CMakeFiles/TPCuatrimestral.dir/Exercise1/Manufacturer.c.obj
+
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Label.c.obj: CMakeFiles/TPCuatrimestral.dir/flags.make
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Label.c.obj: ../Exercise1/Label.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/TPCuatrimestral.dir/Exercise1/Label.c.obj"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\TPCuatrimestral.dir\Exercise1\Label.c.obj   -c C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\Label.c
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Label.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TPCuatrimestral.dir/Exercise1/Label.c.i"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\Label.c > CMakeFiles\TPCuatrimestral.dir\Exercise1\Label.c.i
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Label.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TPCuatrimestral.dir/Exercise1/Label.c.s"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\Label.c -o CMakeFiles\TPCuatrimestral.dir\Exercise1\Label.c.s
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Label.c.obj.requires:
+
+.PHONY : CMakeFiles/TPCuatrimestral.dir/Exercise1/Label.c.obj.requires
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Label.c.obj.provides: CMakeFiles/TPCuatrimestral.dir/Exercise1/Label.c.obj.requires
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Label.c.obj.provides.build
+.PHONY : CMakeFiles/TPCuatrimestral.dir/Exercise1/Label.c.obj.provides
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Label.c.obj.provides.build: CMakeFiles/TPCuatrimestral.dir/Exercise1/Label.c.obj
+
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/LineCart.c.obj: CMakeFiles/TPCuatrimestral.dir/flags.make
+CMakeFiles/TPCuatrimestral.dir/Exercise1/LineCart.c.obj: ../Exercise1/LineCart.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/TPCuatrimestral.dir/Exercise1/LineCart.c.obj"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\TPCuatrimestral.dir\Exercise1\LineCart.c.obj   -c C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\LineCart.c
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/LineCart.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TPCuatrimestral.dir/Exercise1/LineCart.c.i"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\LineCart.c > CMakeFiles\TPCuatrimestral.dir\Exercise1\LineCart.c.i
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/LineCart.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TPCuatrimestral.dir/Exercise1/LineCart.c.s"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\LineCart.c -o CMakeFiles\TPCuatrimestral.dir\Exercise1\LineCart.c.s
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/LineCart.c.obj.requires:
+
+.PHONY : CMakeFiles/TPCuatrimestral.dir/Exercise1/LineCart.c.obj.requires
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/LineCart.c.obj.provides: CMakeFiles/TPCuatrimestral.dir/Exercise1/LineCart.c.obj.requires
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/LineCart.c.obj.provides.build
+.PHONY : CMakeFiles/TPCuatrimestral.dir/Exercise1/LineCart.c.obj.provides
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/LineCart.c.obj.provides.build: CMakeFiles/TPCuatrimestral.dir/Exercise1/LineCart.c.obj
+
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Cart.c.obj: CMakeFiles/TPCuatrimestral.dir/flags.make
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Cart.c.obj: ../Exercise1/Cart.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/TPCuatrimestral.dir/Exercise1/Cart.c.obj"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\TPCuatrimestral.dir\Exercise1\Cart.c.obj   -c C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\Cart.c
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Cart.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TPCuatrimestral.dir/Exercise1/Cart.c.i"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\Cart.c > CMakeFiles\TPCuatrimestral.dir\Exercise1\Cart.c.i
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Cart.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TPCuatrimestral.dir/Exercise1/Cart.c.s"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\Cart.c -o CMakeFiles\TPCuatrimestral.dir\Exercise1\Cart.c.s
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Cart.c.obj.requires:
+
+.PHONY : CMakeFiles/TPCuatrimestral.dir/Exercise1/Cart.c.obj.requires
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Cart.c.obj.provides: CMakeFiles/TPCuatrimestral.dir/Exercise1/Cart.c.obj.requires
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Cart.c.obj.provides.build
+.PHONY : CMakeFiles/TPCuatrimestral.dir/Exercise1/Cart.c.obj.provides
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Cart.c.obj.provides.build: CMakeFiles/TPCuatrimestral.dir/Exercise1/Cart.c.obj
+
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Invoice.c.obj: CMakeFiles/TPCuatrimestral.dir/flags.make
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Invoice.c.obj: ../Exercise1/Invoice.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/TPCuatrimestral.dir/Exercise1/Invoice.c.obj"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\TPCuatrimestral.dir\Exercise1\Invoice.c.obj   -c C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\Invoice.c
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Invoice.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TPCuatrimestral.dir/Exercise1/Invoice.c.i"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\Invoice.c > CMakeFiles\TPCuatrimestral.dir\Exercise1\Invoice.c.i
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Invoice.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TPCuatrimestral.dir/Exercise1/Invoice.c.s"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\Invoice.c -o CMakeFiles\TPCuatrimestral.dir\Exercise1\Invoice.c.s
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Invoice.c.obj.requires:
+
+.PHONY : CMakeFiles/TPCuatrimestral.dir/Exercise1/Invoice.c.obj.requires
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Invoice.c.obj.provides: CMakeFiles/TPCuatrimestral.dir/Exercise1/Invoice.c.obj.requires
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Invoice.c.obj.provides.build
+.PHONY : CMakeFiles/TPCuatrimestral.dir/Exercise1/Invoice.c.obj.provides
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Invoice.c.obj.provides.build: CMakeFiles/TPCuatrimestral.dir/Exercise1/Invoice.c.obj
+
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Catalogue.c.obj: CMakeFiles/TPCuatrimestral.dir/flags.make
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Catalogue.c.obj: ../Exercise1/Catalogue.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/TPCuatrimestral.dir/Exercise1/Catalogue.c.obj"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\TPCuatrimestral.dir\Exercise1\Catalogue.c.obj   -c C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\Catalogue.c
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Catalogue.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TPCuatrimestral.dir/Exercise1/Catalogue.c.i"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\Catalogue.c > CMakeFiles\TPCuatrimestral.dir\Exercise1\Catalogue.c.i
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Catalogue.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TPCuatrimestral.dir/Exercise1/Catalogue.c.s"
+	C:\MinGW\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\Exercise1\Catalogue.c -o CMakeFiles\TPCuatrimestral.dir\Exercise1\Catalogue.c.s
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Catalogue.c.obj.requires:
+
+.PHONY : CMakeFiles/TPCuatrimestral.dir/Exercise1/Catalogue.c.obj.requires
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Catalogue.c.obj.provides: CMakeFiles/TPCuatrimestral.dir/Exercise1/Catalogue.c.obj.requires
+	$(MAKE) -f CMakeFiles\TPCuatrimestral.dir\build.make CMakeFiles/TPCuatrimestral.dir/Exercise1/Catalogue.c.obj.provides.build
+.PHONY : CMakeFiles/TPCuatrimestral.dir/Exercise1/Catalogue.c.obj.provides
+
+CMakeFiles/TPCuatrimestral.dir/Exercise1/Catalogue.c.obj.provides.build: CMakeFiles/TPCuatrimestral.dir/Exercise1/Catalogue.c.obj
+
+
 # Object files for target TPCuatrimestral
 TPCuatrimestral_OBJECTS = \
-"CMakeFiles/TPCuatrimestral.dir/main.c.obj"
+"CMakeFiles/TPCuatrimestral.dir/main.c.obj" \
+"CMakeFiles/TPCuatrimestral.dir/Exercise1/Appliance.c.obj" \
+"CMakeFiles/TPCuatrimestral.dir/Exercise1/InvoiceLine.c.obj" \
+"CMakeFiles/TPCuatrimestral.dir/Exercise1/Provider.c.obj" \
+"CMakeFiles/TPCuatrimestral.dir/Exercise1/Manufacturer.c.obj" \
+"CMakeFiles/TPCuatrimestral.dir/Exercise1/Label.c.obj" \
+"CMakeFiles/TPCuatrimestral.dir/Exercise1/LineCart.c.obj" \
+"CMakeFiles/TPCuatrimestral.dir/Exercise1/Cart.c.obj" \
+"CMakeFiles/TPCuatrimestral.dir/Exercise1/Invoice.c.obj" \
+"CMakeFiles/TPCuatrimestral.dir/Exercise1/Catalogue.c.obj"
 
 # External object files for target TPCuatrimestral
 TPCuatrimestral_EXTERNAL_OBJECTS =
 
 TPCuatrimestral.exe: CMakeFiles/TPCuatrimestral.dir/main.c.obj
+TPCuatrimestral.exe: CMakeFiles/TPCuatrimestral.dir/Exercise1/Appliance.c.obj
+TPCuatrimestral.exe: CMakeFiles/TPCuatrimestral.dir/Exercise1/InvoiceLine.c.obj
+TPCuatrimestral.exe: CMakeFiles/TPCuatrimestral.dir/Exercise1/Provider.c.obj
+TPCuatrimestral.exe: CMakeFiles/TPCuatrimestral.dir/Exercise1/Manufacturer.c.obj
+TPCuatrimestral.exe: CMakeFiles/TPCuatrimestral.dir/Exercise1/Label.c.obj
+TPCuatrimestral.exe: CMakeFiles/TPCuatrimestral.dir/Exercise1/LineCart.c.obj
+TPCuatrimestral.exe: CMakeFiles/TPCuatrimestral.dir/Exercise1/Cart.c.obj
+TPCuatrimestral.exe: CMakeFiles/TPCuatrimestral.dir/Exercise1/Invoice.c.obj
+TPCuatrimestral.exe: CMakeFiles/TPCuatrimestral.dir/Exercise1/Catalogue.c.obj
 TPCuatrimestral.exe: CMakeFiles/TPCuatrimestral.dir/build.make
 TPCuatrimestral.exe: CMakeFiles/TPCuatrimestral.dir/linklibs.rsp
 TPCuatrimestral.exe: CMakeFiles/TPCuatrimestral.dir/objects1.rsp
 TPCuatrimestral.exe: CMakeFiles/TPCuatrimestral.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable TPCuatrimestral.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Ignacio\Dropbox\Facultad\AyED\TPCuatrimestral\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C executable TPCuatrimestral.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\TPCuatrimestral.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -101,6 +335,15 @@ CMakeFiles/TPCuatrimestral.dir/build: TPCuatrimestral.exe
 .PHONY : CMakeFiles/TPCuatrimestral.dir/build
 
 CMakeFiles/TPCuatrimestral.dir/requires: CMakeFiles/TPCuatrimestral.dir/main.c.obj.requires
+CMakeFiles/TPCuatrimestral.dir/requires: CMakeFiles/TPCuatrimestral.dir/Exercise1/Appliance.c.obj.requires
+CMakeFiles/TPCuatrimestral.dir/requires: CMakeFiles/TPCuatrimestral.dir/Exercise1/InvoiceLine.c.obj.requires
+CMakeFiles/TPCuatrimestral.dir/requires: CMakeFiles/TPCuatrimestral.dir/Exercise1/Provider.c.obj.requires
+CMakeFiles/TPCuatrimestral.dir/requires: CMakeFiles/TPCuatrimestral.dir/Exercise1/Manufacturer.c.obj.requires
+CMakeFiles/TPCuatrimestral.dir/requires: CMakeFiles/TPCuatrimestral.dir/Exercise1/Label.c.obj.requires
+CMakeFiles/TPCuatrimestral.dir/requires: CMakeFiles/TPCuatrimestral.dir/Exercise1/LineCart.c.obj.requires
+CMakeFiles/TPCuatrimestral.dir/requires: CMakeFiles/TPCuatrimestral.dir/Exercise1/Cart.c.obj.requires
+CMakeFiles/TPCuatrimestral.dir/requires: CMakeFiles/TPCuatrimestral.dir/Exercise1/Invoice.c.obj.requires
+CMakeFiles/TPCuatrimestral.dir/requires: CMakeFiles/TPCuatrimestral.dir/Exercise1/Catalogue.c.obj.requires
 
 .PHONY : CMakeFiles/TPCuatrimestral.dir/requires
 
