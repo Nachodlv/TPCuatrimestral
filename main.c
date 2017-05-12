@@ -23,7 +23,7 @@ int main() {
     printf("%s",phones->name);
     char a;
     scanf(" %c",&a );
-    perror("Error");
+    //perror("Error");
     char b;
     scanf(" %c",&b );
     return 0;
