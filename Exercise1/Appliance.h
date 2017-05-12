@@ -10,7 +10,7 @@ struct appliance{
     char* name;
     char* model;
     double price;
-    InvoiceLine* invoiceLineArray;
+    InvoiceLine* invoiceLine;
     double discount;
     Provider* provider;
     Label* label;

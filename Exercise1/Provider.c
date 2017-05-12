@@ -11,7 +11,7 @@
 #include "InvoiceLine.h"
 
 Provider* newProvider(char* name, char* description, char* direction, char*city, char* phone, char* web, Manufacturer* manufacturer){
-    Provider* provider = malloc(sizeof(provider));
+    Provider* provider = malloc(sizeof(Provider));
     provider->appliancesQuantity=0;
     provider->city=malloc(sizeof(city));
     provider->name=malloc(sizeof(name));

@@ -41,7 +41,6 @@ void freeCatalogue(Catalogue* catalogue1){
 }
 
 void addAppliance(Catalogue* catalogue1,Appliance* appliance1){
-    int maxCapacity = sizeof(catalogue1->applianceBooleanArray)/ sizeof(int);
     int hasInserted=0;
    // int i;
     for(int i=0;i<catalogue1->maxCapacity;i++){
@@ -62,6 +61,9 @@ void addAppliance(Catalogue* catalogue1,Appliance* appliance1){
 void growCatalogue(Catalogue* catalogue1){
     catalogue1->applianceArray = realloc(catalogue1->applianceArray, sizeof(Appliance)*catalogue1->maxCapacity*2);
     catalogue1->applianceBooleanArray=realloc(catalogue1->applianceBooleanArray, sizeof(int)*catalogue1->maxCapacity*2);
+    for(int i=catalogue1->maxCapacity;i<catalogue1->maxCapacity*2;i++){
+        catalogue1->applianceBooleanArray[i]=0;
+    }
     catalogue1->maxCapacity = catalogue1->maxCapacity*2;
 }
 

@@ -7,7 +7,7 @@
 #include <memory.h>
 #include "Label.h"
 Label* newLabel(char* id, char* name){
-    Label* label = malloc(sizeof(label));
+    Label* label = malloc(sizeof(Label));
     label->id=malloc(sizeof(id));
     label->name=malloc(sizeof(name));
 

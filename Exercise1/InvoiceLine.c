@@ -15,3 +15,9 @@ InvoiceLine* newInvoiceLine(char* id, char* article){
     strcpy(invoiceLine1->article,article);
     return invoiceLine1;
 }
+
+void freeInvoiceLine(InvoiceLine* invoiceLine1){
+    free(invoiceLine1->id);
+    free(invoiceLine1->article);
+    free(invoiceLine1);
+}

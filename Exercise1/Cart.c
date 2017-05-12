@@ -21,6 +21,9 @@ Cart* newCart(char* id){
     cart1->lineCartBooleanArray = malloc(sizeof(int)*10);
     cart1->maxCapacity=10;
 
+    for(int i=0;i<cart1->maxCapacity;i++){
+        cart1->lineCartBooleanArray[i]=0;
+    }
     strcpy(cart1->id,id);
     return cart1;
 }
@@ -40,8 +43,8 @@ void freeCart(Cart* cart1){
 
 void addToCart(Cart* cart1, Appliance* appliance1){
     int hasInserted=0;
-    if(appliance1->invoiceLineArray->quantity==0){
-        askForAppliances(appliance1->provider,appliance1->invoiceLineArray);
+    if(appliance1->invoiceLine->quantity==0){
+        askForAppliances(appliance1->provider,appliance1->invoiceLine);
     }
     int i;
     for(i=0;i<cart1->maxCapacity;i++){
@@ -67,6 +70,9 @@ void addToCart(Cart* cart1, Appliance* appliance1){
 void growCart(Cart* cart1){
     cart1->lineCartArray = realloc(cart1->lineCartArray, sizeof(LineCart)*cart1->maxCapacity*2);
     cart1->lineCartBooleanArray=realloc(cart1->lineCartBooleanArray, sizeof(int)*cart1->maxCapacity*2);
+    for(int i=cart1->maxCapacity;i<cart1->maxCapacity*2;i++){
+        cart1->lineCartBooleanArray[i]=0;
+    }
     cart1->maxCapacity=cart1->maxCapacity*2;
 }
 
