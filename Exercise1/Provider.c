@@ -20,7 +20,7 @@ Provider* newProvider(char* name, char* description, char* direction, char*city,
     provider->phone=malloc(sizeof(phone));
     provider->web=malloc(sizeof(web));
     provider->manufacturer=malloc(sizeof(manufacturer));
-    provider->manufacturer=newManufacturer(manufacturer->name,manufacturer->description,manufacturer->description,manufacturer->city,manufacturer->phone,manufacturer->web);
+    provider->manufacturer=newManufacturer(manufacturer->name,manufacturer->description,manufacturer->direction,manufacturer->city,manufacturer->phone,manufacturer->web);
 
     strcpy(provider->city,city);
     strcpy(provider->name,name);
