@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <malloc.h>
+#include <stdlib.h>
 #include "Exercise1/Provider.h"
 #include "Exercise1/Catalogue.h"
 #include "Exercise1/Manufacturer.h"
