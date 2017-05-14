@@ -10,14 +10,14 @@ typedef struct appliance Appliance;
 typedef struct invoice Invoice;
 typedef struct cart Cart;
 struct cart{
-    char* id;
+    int id;
     double total;
     LineCart** lineCartArray;
     int* lineCartBooleanArray;
     int maxCapacity;
 };
 
-Cart* newCart(char* id);
+Cart* newCart(int id);
 void freeCart(Cart* cart1);
 void addToCart(Cart* cart1,Appliance* appliance1);
 Appliance* erraseAppliance(Cart* cart1,Appliance* appliance1);

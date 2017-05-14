@@ -13,10 +13,10 @@
 #include "InvoiceLine.h"
 #include "Label.h"
 
-Cart* newCart(char* id){
+Cart* newCart(int id){
     Cart* cart1 = malloc(sizeof(Cart));
     cart1->total=0;
-    cart1->id = malloc(sizeof(id));
+    cart1->id = id;
     cart1->lineCartArray = malloc(sizeof(LineCart)*10);
     cart1->lineCartBooleanArray = malloc(sizeof(int)*10);
     cart1->maxCapacity=10;
@@ -24,7 +24,6 @@ Cart* newCart(char* id){
     for(int i=0;i<cart1->maxCapacity;i++){
         cart1->lineCartBooleanArray[i]=0;
     }
-    strcpy(cart1->id,id);
     return cart1;
 }
 
@@ -37,7 +36,6 @@ void freeCart(Cart* cart1){
     }
     free(cart1->lineCartArray);
     free(cart1->lineCartBooleanArray);
-    free(cart1->id);
     free(cart1);
 }
 
