@@ -108,7 +108,7 @@ void startShopping(Catalogue** catalogueArray,int cataloguesQuantity, Cart* cart
     int option;
     printf(" %s","Choose a catalogue: ");
     scanf(" %i*c\n",&option);
-    if(option==cataloguesQuantity+1){
+    if(option==cataloguesQuantity+1 || option>cataloguesQuantity+1){
         return;
     }
     printAppliances(catalogueArray[option-1]);
@@ -142,6 +142,11 @@ void seeCart(Cart* cart1){
 void stopShopping(Cart* cart1){
     Invoice* invoice1 = finishShopping(cart1);
     printf("%s%i\n", "User: ", invoice1->id);
+    for(int i=0;i<invoice1->currentInvoiceLine;i++){
+        printf("%s", invoice1->invoiceLineArray[i]->article);
+        printf("%s"," X ");
+        printf("%i\n",invoice1->invoiceLineArray[i]->quantity );
+    }
     printf("%s%f\n","To pay: ", invoice1->toPay);
     int a;
     printf("%s","Enter any letter to continue: ");

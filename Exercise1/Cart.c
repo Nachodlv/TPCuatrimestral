@@ -10,7 +10,7 @@
 #include "Appliance.h"
 #include "Invoice.h"
 #include "LineCart.h"
-#include "InvoiceLine.h"
+#include "Stock.h"
 #include "Label.h"
 
 Cart* newCart(int id){
@@ -41,15 +41,17 @@ void freeCart(Cart* cart1){
 
 void addToCart(Cart* cart1, Appliance* appliance1){
     int hasInserted=0;
-    if(appliance1->invoiceLine->quantity==0){
-        askForAppliances(appliance1->provider,appliance1->invoiceLine);
+    if(appliance1->stock->quantity==0){
+        askForAppliances(appliance1->provider,appliance1->stock);
     }
     int i;
     for(i=0;i<cart1->maxCapacity;i++){
         if(cart1->lineCartBooleanArray[i]==1) {
-            if(compareTo(cart1->lineCartArray[i]->appliance1,appliance1)==0){
+            if(compareTo(cart1->lineCartArray[i]->appliance1,appliance1)==1){
                 cart1->lineCartArray[i]->quantity++;
-                cart1->total+=appliance1->price*appliance1->discount;
+                cart1->total+=appliance1->price*appliance1->discount+appliance1->price;
+                hasInserted=1;
+                break;
             }
         } else{
             cart1->lineCartArray[i] = newLineCart(appliance1->label->id,appliance1);
@@ -92,7 +94,13 @@ Appliance* erraseAppliance(Cart* cart1, Appliance* appliance1){
 }
 
 Invoice* finishShopping(Cart* cart){
-    return newInvoice(cart->id,cart->total);
+    Invoice* invoice1= newInvoice(cart->id,cart->total,cart->maxCapacity);
+    for(int i=0;i<cart->maxCapacity;i++){
+        if(cart->lineCartBooleanArray[i]==1){
+            addInvoiceLine(invoice1,newInvoiceLine(cart->lineCartArray[i]->quantity,cart->lineCartArray[i]->appliance1->name));
+        }
+    }
+    return invoice1;
 }
 
 

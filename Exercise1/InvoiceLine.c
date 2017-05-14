@@ -1,23 +1,20 @@
 //
-// Created by Ignacio on 10/5/2017.
+// Created by Ignacio on 14/5/2017.
 //
-
 
 #include <stdlib.h>
 #include <memory.h>
 #include "InvoiceLine.h"
-InvoiceLine* newInvoiceLine(char* id, char* article){
-    InvoiceLine* invoiceLine1 = malloc(sizeof(InvoiceLine));
-    invoiceLine1->id=malloc(sizeof(id));
-    invoiceLine1->article=malloc(sizeof(article));
 
-    strcpy(invoiceLine1->id,id);
-    strcpy(invoiceLine1->article,article);
-    return invoiceLine1;
+InvoiceLine* newInvoiceLine(int quantity, char* article){
+    InvoiceLine* invoiceLine = malloc(sizeof(InvoiceLine));
+    invoiceLine->quantity=quantity;
+    invoiceLine->article=malloc(sizeof(article));
+    strcpy(invoiceLine->article,article);
+    return invoiceLine;
 }
 
-void freeInvoiceLine(InvoiceLine* invoiceLine1){
-    free(invoiceLine1->id);
-    free(invoiceLine1->article);
-    free(invoiceLine1);
+void freeInvoiceLine(InvoiceLine* invoiceLine){
+    free(invoiceLine->article);
+    free(invoiceLine);
 }

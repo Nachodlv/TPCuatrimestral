@@ -5,7 +5,7 @@
 #include "Appliance.h"
 #include "Label.h"
 #include "Provider.h"
-#include "InvoiceLine.h"
+#include "Stock.h"
 
 Appliance* newAppliance(char* name, char* model, double price, double discount, Provider* provider1){
     Appliance* appliance = malloc(sizeof(Appliance));
@@ -15,19 +15,14 @@ Appliance* newAppliance(char* name, char* model, double price, double discount, 
     appliance->name = malloc(sizeof(name));
     appliance->provider = malloc(sizeof(provider1));
     appliance->label = malloc(sizeof(Label));
-    appliance->label = newLabel("asd",name);
-    appliance->invoiceLine = malloc(sizeof(InvoiceLine));
-    appliance->invoiceLine = newInvoiceLine(appliance->label->id,name);
+    appliance->label = newLabel(name,model);
+    appliance->stock = malloc(sizeof(Stock));
+    appliance->stock = newStock(appliance->label->id,name);
     appliance->provider = malloc(sizeof(provider1));
     appliance->provider = newProvider(provider1->name,provider1->description,provider1->direction,provider1->city,provider1->phone,provider1->web,provider1->manufacturer);
     strcpy(appliance->model,model);
     strcpy(appliance->name,name);
     return appliance;
-}
-
-char* generateId(char* name, char* model){
-    char* result=strcat(name,model);
-    return result;
 }
 
 void freeAppliance(Appliance* appliance){

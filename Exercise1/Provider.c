@@ -8,7 +8,7 @@
 #include "Provider.h"
 #include "Appliance.h"
 #include "Manufacturer.h"
-#include "InvoiceLine.h"
+#include "Stock.h"
 
 Provider* newProvider(char* name, char* description, char* direction, char*city, char* phone, char* web, Manufacturer* manufacturer){
     Provider* provider = malloc(sizeof(Provider));
@@ -43,10 +43,10 @@ void freeProvider(Provider* provider){
     free(provider);
 }
 
-void askForAppliances(Provider* provider1,InvoiceLine* invoiceLine1){
+void askForAppliances(Provider* provider1,Stock* stock){
     if(provider1->appliancesQuantity==0){
         createAppliance(provider1->manufacturer,provider1,15);
     }
     provider1->appliancesQuantity-=5;
-    invoiceLine1->quantity+=10;
+    stock->quantity+=10;
 }

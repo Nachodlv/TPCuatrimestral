@@ -12,8 +12,8 @@ set(SOURCE_FILES
         Exercise1/Catalogue.h
         Exercise1/Invoice.c
         Exercise1/Invoice.h
-        Exercise1/InvoiceLine.c
-        Exercise1/InvoiceLine.h
+        Exercise1/Stock.c
+        Exercise1/Stock.h
         Exercise1/Label.c
         Exercise1/Label.h
         Exercise1/LineCart.c
@@ -25,6 +25,6 @@ set(SOURCE_FILES
         .gitignore
         CMakeLists.txt
         main.c
-        README.md)
+        README.md Exercise1/InvoiceLine.c Exercise1/InvoiceLine.h)
 
 add_executable(TPCuatrimestral ${SOURCE_FILES})
