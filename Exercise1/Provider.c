@@ -47,6 +47,9 @@ void askForAppliances(Provider* provider1,Stock* stock){
     if(provider1->appliancesQuantity==0){
         createAppliance(provider1->manufacturer,provider1,15);
     }
-    provider1->appliancesQuantity-=5;
-    stock->quantity+=10;
+    int i;
+    i = provider1->appliancesQuantity/2;
+    stock->quantity+=i;
+    provider1->appliancesQuantity-= (i + provider1->appliancesQuantity%2);
+
 }
