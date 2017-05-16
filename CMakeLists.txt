@@ -4,6 +4,8 @@ project(TPCuatrimestral)
 set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
+        Exercise1/ExecuteExercise1.c
+        Exercise1/ExecuteExercise1.h
         Exercise1/Appliance.c
         Exercise1/Appliance.h
         Exercise1/Cart.c
@@ -25,6 +27,8 @@ set(SOURCE_FILES
         .gitignore
         CMakeLists.txt
         main.c
-        README.md Exercise1/InvoiceLine.c Exercise1/InvoiceLine.h)
+        README.md
+        Exercise1/InvoiceLine.c
+        Exercise1/InvoiceLine.h)
 
 add_executable(TPCuatrimestral ${SOURCE_FILES})
