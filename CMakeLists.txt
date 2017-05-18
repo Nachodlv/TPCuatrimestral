@@ -24,6 +24,8 @@ set(SOURCE_FILES
         Exercise1/Provider.h
         Exercise1/InvoiceLine.c
         Exercise1/InvoiceLine.h
+        Exercise1/ExecuteExercise1.c
+        Exercise1/ExecuteExercise1.h
         .gitignore
         CMakeLists.txt
         main.c
