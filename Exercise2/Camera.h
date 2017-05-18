@@ -17,6 +17,6 @@ struct camera{
     int code;
 };
 Camera* newCamera(int megaPixels, int lcdScreen, int opticZoom, int type, int code);
-void addAccesory(Camera* camera,Accesory* accesory);
+void addAccesoryToCamera(Camera* camera,Accesory* accesory);
 void freeCamera(Camera* camera);
 #endif //TPCUATRIMESTRAL_CAMERA_H
