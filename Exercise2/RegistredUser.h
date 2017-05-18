@@ -1,0 +1,8 @@
+//
+// Created by Gonzalo de Achaval on 18/5/17.
+//
+
+#ifndef TPCUATRIMESTRAL_REGISTREDUSER_H
+#define TPCUATRIMESTRAL_REGISTREDUSER_H
+
+#endif //TPCUATRIMESTRAL_REGISTREDUSER_H
