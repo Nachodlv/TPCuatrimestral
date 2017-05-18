@@ -12,4 +12,7 @@ SaleLine* newSaleLine(Product* product, int quantity){
     return saleLine1;
 }
 
-
+void freeSaleLine(SaleLine* saleLine){
+    freeProduct(saleLine->product);
+    free(saleLine);
+}

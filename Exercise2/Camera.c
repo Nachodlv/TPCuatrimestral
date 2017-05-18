@@ -6,6 +6,9 @@
 
 Camera* newCamera(int megaPixels, int lcdScreen, int opticZoom, int type, int code){
     Camera* camera = malloc(sizeof(Camera));
+    camera->quantityOfAccesories=0;
+    camera->maxCapacity=5;
+    camera->accesoryArray = malloc(sizeof(Accesory)*5);
     camera->megaPixels=megaPixels;
     camera->lcdScreen=lcdScreen;
     camera->opticZoom=opticZoom;
@@ -15,5 +18,18 @@ Camera* newCamera(int megaPixels, int lcdScreen, int opticZoom, int type, int co
 }
 
 void freeCamera(Camera* camera){
+    for(int i=0;i<camera->maxCapacity;i++){
+        freeAccesory(camera->accesoryArray[i]);
+    }
+    free(camera->accesoryArray);
     free(camera);
+}
+
+void addAccesoryToCamera(Camera* camera,Accesory* accesory){
+    if(camera->quantityOfAccesories==camera->maxCapacity){
+        exit(2);
+    }else{
+        camera->accesoryArray[camera->quantityOfAccesories]=newAccesory(accesory->accesoryType,accesory->comment,accesory->code);
+        camera->quantityOfAccesories++;
+    }
 }

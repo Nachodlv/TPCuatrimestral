@@ -20,6 +20,8 @@ CameraAndAccesoryTable* newCameraAndAccesoryTable();
 void freeCameraAndAccesoryTable(CameraAndAccesoryTable* cameraAndAccesoryTable);
 void addCameraToTable(CameraAndAccesoryTable* cameraAndAccesoryTable,Camera* camera);
 void addAccesoryToTable(CameraAndAccesoryTable* cameraAndAccesoryTable,Accesory* accesory);
+void growAccesoryArray(CameraAndAccesoryTable* cameraAndAccesoryTable);
+void growCameraArray(CameraAndAccesoryTable* cameraAndAccesoryTable);
 int isCamera(CameraAndAccesoryTable* cameraAndAccesoryTable,int code);
 int isAccesory(CameraAndAccesoryTable* cameraAndAccesoryTable,int code);
 Camera* getCamera(CameraAndAccesoryTable* cameraAndAccesoryTable, int code);

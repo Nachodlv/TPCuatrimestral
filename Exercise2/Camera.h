@@ -13,6 +13,7 @@ struct camera{
     int opticZoom;
     int type;
     Accesory** accesoryArray;
+    int quantityOfAccesories;
     int maxCapacity;
     int code;
 };
