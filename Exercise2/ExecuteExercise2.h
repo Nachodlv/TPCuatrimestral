@@ -2,6 +2,10 @@
 // Created by Gonzalo de Achaval on 18/5/17.
 //
 
+
+#ifndef TPCUATRIMESTRAL_EXECUTEEXERCISE2_H
+#define TPCUATRIMESTRAL_EXECUTEEXERCISE2_H
+
 #include "RegisteredUser.h"
 #include "Product.h"
 #include "CameraAndAccesoryTable.h"
@@ -13,10 +17,7 @@
 #include "../Exercise1/Manufacturer.h"
 #include "Accesory.h"
 
-
-#ifndef TPCUATRIMESTRAL_EXECUTEEXERCISE2_H
-#define TPCUATRIMESTRAL_EXECUTEEXERCISE2_H
-
+int executeExercise2();
 void printUsersArray(RegisteredUser** pUser, int usersQuantity);
 RegisteredUser* chooseUser(RegisteredUser** pUser);
 void printProductsArray(Product** pProduct, int productsQuantity);
