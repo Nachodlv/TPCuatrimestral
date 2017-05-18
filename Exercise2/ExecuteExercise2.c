@@ -19,11 +19,11 @@ int executeExercise2(){
     registeredUsers[1] = user2;
     registeredUsers[2] = user3;
 
-    Manufacturer* manufacturer1 = newManufacturer("Hector", 1);
-    Manufacturer* manufacturer2 = newManufacturer("Victor", 2);
+    Manufacturer* manufacturer1 = newManufacturerExercise2("Hector", 1);
+    Manufacturer* manufacturer2 = newManufacturerExercise2("Victor", 2);
 
-    Provider* provider1 = newProvider("CIF", "Gianni", "Edu", "1", "A", "B", "C", "D", "2", "3");
-    Provider* provider2 = newProvider("CIF2", "Edu", "Gianni", "1", "A", "B", "C", "D", "2", "3");
+    Provider* provider1 = newProviderExercise2("CIF", "Gianni", "Edu", "1", "A", "B", "C", "D", "2", "3");
+    Provider* provider2 = newProviderExercise2("CIF2", "Edu", "Gianni", "1", "A", "B", "C", "D", "2", "3");
 
     int productQuantity = 4;
     Product* product1 = newProduct("NIKON", 1, 100, "A", provider1, manufacturer1);

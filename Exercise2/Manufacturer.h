@@ -10,7 +10,7 @@ struct manufacturer{
     char* name;
     int code;
 };
-Manufacturer* newManufacturer(char* name, int code);
-void freeManufacturer(Manufacturer* manufacturer1);
+Manufacturer* newManufacturerExercise2(char* name, int code);
+void freeManufacturerExercise2(Manufacturer* manufacturer1);
 
 #endif //TPCUATRIMESTRAL_MANUFACTURER_H

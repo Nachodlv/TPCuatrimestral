@@ -19,7 +19,7 @@ struct provider{
     char* postalCode;
 };
 
-Provider* newProvider(char* CIF, char* name, char* responsable, char* phone, char* address, char* location, char* province, char* country, char* postalCode, char* fax);
-void freeProvider(Provider* provider1);
+Provider* newProviderExercise2(char* CIF, char* name, char* responsable, char* phone, char* address, char* location, char* province, char* country, char* postalCode, char* fax);
+void freeProviderExercise2(Provider* provider1);
 
 #endif //TPCUATRIMESTRAL_PROVIDER_H

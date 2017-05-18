@@ -5,7 +5,7 @@
 #include <memory.h>
 #include "Manufacturer.h"
 
-Manufacturer* newAppliance(char* name, int code){
+Manufacturer* newManufacturerExercise2(char* name, int code){
     Manufacturer* manufacturer = malloc(sizeof(Manufacturer));
     manufacturer->name = malloc(sizeof(name));
     manufacturer->code=code;
@@ -13,7 +13,7 @@ Manufacturer* newAppliance(char* name, int code){
     return manufacturer;
 }
 
-void freeManufacturer(Manufacturer* manufacturer1){
+void freeManufacturerExercise2(Manufacturer* manufacturer1){
     free(manufacturer1->name);
     free(manufacturer1);
 }

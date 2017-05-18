@@ -5,7 +5,7 @@
 #include "Provider.h"
 #include <stdlib.h>
 #include <memory.h>
-Provider* newProvider(char* CIF, char* name, char* responsable, char* phone, char* address, char* location, char* province, char* country, char* postalCode, char* fax){
+Provider* newProviderExercise2(char* CIF, char* name, char* responsable, char* phone, char* address, char* location, char* province, char* country, char* postalCode, char* fax){
     Provider* provider1 = malloc(sizeof(Provider));
     provider1->CIF = malloc(sizeof(CIF));
     provider1->name = malloc(sizeof(name));
@@ -30,7 +30,7 @@ Provider* newProvider(char* CIF, char* name, char* responsable, char* phone, cha
     return provider1;
 }
 
-void freeProvider(Provider* provider1){
+void freeProviderExercise2(Provider* provider1){
     free(provider1->CIF);
     free(provider1->name);
     free(provider1->responsable);

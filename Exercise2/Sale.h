@@ -21,6 +21,7 @@ struct sale{
 Sale* newSale(int code, double discount);
 void freeSale(Sale* sale);
 void addProduct(Sale* sale, Product* product);
+void growSaleLineArray(Sale* sale);
 void removeProduct(Sale* sale, int productCode);
-void endShopping(Sale* sale);
+double endShopping(Sale* sale);
 #endif //TPCUATRIMESTRAL_SALE_H
