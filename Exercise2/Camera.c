@@ -4,10 +4,8 @@
 
 #include "Camera.h"
 
-Camera* newCamera(int megaPixels, int lcdScreen, int opticZoom, int type, Accesory* accesory, int code){
+Camera* newCamera(int megaPixels, int lcdScreen, int opticZoom, int type, int code){
     Camera* camera = malloc(sizeof(Camera));
-    camera->accesory=malloc(sizeof(Accesory));
-    camera->accesory = newAccesory(accesory->accesoryType,accesory->comment,accesory->code);
     camera->megaPixels=megaPixels;
     camera->lcdScreen=lcdScreen;
     camera->opticZoom=opticZoom;
@@ -17,6 +15,5 @@ Camera* newCamera(int megaPixels, int lcdScreen, int opticZoom, int type, Acceso
 }
 
 void freeCamera(Camera* camera){
-    freeAccesory(camera->accesory);
     free(camera);
 }
