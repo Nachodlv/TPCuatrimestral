@@ -30,6 +30,9 @@ set(SOURCE_FILES
         CMakeLists.txt
         main.c
         README.md
-        Exercise2/RegistredUser.c Exercise2/RegistredUser.h Exercise2/Sale.c Exercise2/Sale.h Exercise2/SaleLine.c Exercise2/SaleLine.h Exercise2/Product.c Exercise2/Product.h Exercise2/Manufacturer.c Exercise2/Manufacturer.h Exercise2/Provider.c Exercise2/Provider.h Exercise2/Camera.c Exercise2/Camera.h Exercise2/Accesory.c Exercise2/Accesory.h)
+        Exercise2/RegistredUser.c Exercise2/RegistredUser.h Exercise2/Sale.c Exercise2/Sale.h Exercise2/SaleLine.c
+        Exercise2/SaleLine.h Exercise2/Product.c Exercise2/Product.h Exercise2/Manufacturer.c Exercise2/Manufacturer.h
+        Exercise2/Provider.c Exercise2/Provider.h Exercise2/Camera.c Exercise2/Camera.h Exercise2/Accesory.c Exercise2/Accesory.h
+        Exercise2/CameraAndAccesoryTable.c Exercise2/CameraAndAccesoryTable.h)
 
 add_executable(TPCuatrimestral ${SOURCE_FILES})
