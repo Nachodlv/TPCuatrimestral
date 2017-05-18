@@ -3,3 +3,44 @@
 //
 
 #include "Provider.h"
+#include <stdlib.h>
+#include <memory.h>
+Provider* newProvider(char* CIF, char* name, char* responsable, char* phone, char* address, char* location, char* province, char* country, char* postalCode, char* fax){
+    Provider* provider1 = malloc(sizeof(Provider));
+    provider1->CIF = malloc(sizeof(CIF));
+    provider1->name = malloc(sizeof(name));
+    provider1->responsable = malloc(sizeof(responsable));
+    provider1->phone = malloc(sizeof(phone));
+    provider1->address = malloc(sizeof(address));
+    provider1->location = malloc(sizeof(location));
+    provider1->province = malloc(sizeof(province));
+    provider1->country = malloc(sizeof(country));
+    provider1->postalCode = malloc(sizeof(postalCode));
+    provider1->fax = malloc(sizeof(fax));
+    strcpy(provider1->CIF,CIF);
+    strcpy(provider1->name,name);
+    strcpy(provider1->responsable,responsable);
+    strcpy(provider1->phone,phone);
+    strcpy(provider1->address,address);
+    strcpy(provider1->location,location);
+    strcpy(provider1->province,province);
+    strcpy(provider1->country,country);
+    strcpy(provider1->postalCode,postalCode);
+    strcpy(provider1->fax,fax);
+    return provider1;
+}
+
+void freeProvider(Provider* provider1){
+    free(provider1->CIF);
+    free(provider1->name);
+    free(provider1->responsable);
+    free(provider1->phone);
+    free(provider1->address);
+    free(provider1->location);
+    free(provider1->province);
+    free(provider1->country);
+    free(provider1->postalCode);
+    free(provider1->fax);
+    free(provider1);
+}
+

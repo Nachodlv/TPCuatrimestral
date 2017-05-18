@@ -18,7 +18,7 @@ struct registeredUser{
     //int role;
 };
 RegisteredUser* newResgisteredUser(char* name, char* dni, char* address, char* phone, char* location, char* province, char* country, char* postalCode);
-void freeResgisteredUser(RegisteredUser*);
+void freeResgisteredUser(RegisteredUser* registeredUser1);
 
 
 #endif //TPCUATRIMESTRAL_REGISTREDUSER_H
