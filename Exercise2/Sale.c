@@ -41,6 +41,7 @@ void addProduct(Sale* sale, Product* product){
     for(int i=0;i<sale->saleLineMaxCapacity;i++){
         if(sale->booleanArray[i]==0){
             sale->saleLineArray[i]=newSaleLine(product,1);
+            sale->booleanArray[i]=1;
             return;
         }
     }
@@ -75,7 +76,7 @@ double endShopping(Sale* sale){
     sale->time=time(0);
     for(int i=0;i<sale->saleLineMaxCapacity;i++){
         if(sale->booleanArray[i]==1){
-            total+=sale->saleLineArray[i]->product->price*sale->discount*sale->saleLineArray[i]->quantity;
+            total+=sale->saleLineArray[i]->product->price * (1-(sale->discount/100)) *sale->saleLineArray[i]->quantity;
         }
     }
     return total;

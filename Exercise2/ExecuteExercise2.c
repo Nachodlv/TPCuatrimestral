@@ -7,6 +7,7 @@
 #include "ExecuteExercise2.h"
 
 
+void printSaleInfo(Sale *pSale);
 
 int executeExercise2(){
 
@@ -56,7 +57,7 @@ int executeExercise2(){
 
     printUsersArray(registeredUsers, usersQuantity);
     chooseUser(registeredUsers);
-    menuAndExit(productQuantity, products, sale1, cameraAndAccesoryTable1);
+    printSaleInfo(menuAndExit(productQuantity, products, sale1, cameraAndAccesoryTable1));
 
     return 0;
 }
@@ -97,7 +98,7 @@ int chooseProduct() {
 
 void printProductInfo(Product* product) {
     printf("%s\n", product->name);
-    printf("%f\n", product->price);
+    printf("%.2f\n", product->price);
 }
 
 Sale* menuAndExit(int productQuantity, Product** pProduct, Sale* sale, CameraAndAccesoryTable* table) {
@@ -203,6 +204,19 @@ void printMenu() {
     printf("%s\n", "Back");
 }
 
+void printSaleInfo(Sale *sale) {
+    printf("\n");
+    printf("%s", "Products Bought ");
+    printf("%s%.2f%s\n", "(discount of: ", sale->discount, "%)");
+    for(int i=0; i<sale->saleLineMaxCapacity; i++){
+        if(sale->booleanArray[i] == 1){
+            printf("%s%s%d%s\n", sale->saleLineArray[i]->product->name, "(x ", sale->saleLineArray[i]->quantity, ")");
+        }
+    }
+    printf("\n");
+    printf("%s\t", "Total amount: ");
+    printf("%.2f\n", endShopping(sale));
+}
 
 
 
