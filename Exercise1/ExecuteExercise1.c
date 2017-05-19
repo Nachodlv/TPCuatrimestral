@@ -55,7 +55,7 @@ void printAppliances(Catalogue* catalogue1){
             printf("%d\t",counter);
             printf("%s",catalogue1->applianceArray[i]->name);
             printf("%s", " ~ ");
-            printf("%f\n",catalogue1->applianceArray[i]->price*catalogue1->applianceArray[i]->discount);
+            printf("%.2f\n",catalogue1->applianceArray[i]->price*catalogue1->applianceArray[i]->discount);
             counter++;
         }
     }
@@ -140,7 +140,7 @@ void stopShopping(Cart* cart1){
         printf("%s"," X ");
         printf("%i\n",invoice1->invoiceLineArray[i]->quantity );
     }
-    printf("%s%f\n","To pay: ", invoice1->toPay);
+    printf("%s%.2f\n","To pay: ", invoice1->toPay);
     int a;
     printf("%s","Enter any letter to continue: ");
     scanf("%i",&a);
