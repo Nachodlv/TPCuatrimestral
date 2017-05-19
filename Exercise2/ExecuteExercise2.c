@@ -62,6 +62,7 @@ int executeExercise2(){
 }
 
 void printUsersArray(RegisteredUser** pUser, int usersQuantity) {
+    printf("%s\n", "USERS:");
     for(int i=0;i<usersQuantity;i++){
         printf(" %d\t", i+1);
         printf("%s\n", pUser[i]->name);
@@ -70,12 +71,14 @@ void printUsersArray(RegisteredUser** pUser, int usersQuantity) {
 
 RegisteredUser* chooseUser(RegisteredUser** pUser){
     int userNumber;
-    printf("%s\n", "Choose valid option: \n");
+    printf("%s\t", "Choose valid option: ");
     scanf(" %i*c",&userNumber);
+    printf("\n");
     return pUser[userNumber-1];
 }
 
 void printProductsArray(Product** pProduct, int productsQuantity) {
+    printf("%s\n", "PRODUCTS:");
     for(int i=0; i<productsQuantity; i++){
         printf(" %d\t", i+1);
         printf("%s\n", pProduct[i]->name);
@@ -86,8 +89,9 @@ void printProductsArray(Product** pProduct, int productsQuantity) {
 
 int chooseProduct() {
     int productNumber;
-    printf("%s\n", "Choose valid option: \n");
+    printf("%s\t", "Choose valid option:");
     scanf(" %i*c",&productNumber);
+    printf("\n");
     return productNumber-1;
 }
 
@@ -119,11 +123,11 @@ void printSpecificInfo(Product *pProduct, CameraAndAccesoryTable *pTable) {
 }
 
 void printCameraInfo(Camera* camera) {
-    printf("%s, %d\n", "Screen: ", camera->lcdScreen);
-    printf("%s, %d\n", "Max capacity: ", camera->maxCapacity);
-    printf("%s, %d\n", "Mega pixels: ", camera->megaPixels);
-    printf("%s, %d\n", "Optic zoom: ", camera->opticZoom);
-    printf("%s, %s\n", "Type: ", getCameraType(camera));
+    printf("%s%d\n", "Screen: ", camera->lcdScreen);
+    printf("%s%d\n", "Max capacity: ", camera->maxCapacity);
+    printf("%s%d\n", "Mega pixels: ", camera->megaPixels);
+    printf("%s%d\n", "Optic zoom: ", camera->opticZoom);
+    printf("%s%s\n", "Type: ", getCameraType(camera));
 }
 
 char* getCameraType(Camera* camera) {
@@ -134,7 +138,7 @@ char* getCameraType(Camera* camera) {
 
 void printAccesoryInfo(Accesory* accesory) {
     printf("%s\n", accesory->comment);
-    printf("%s, %s\n", "Type: ", getAccesoryType(accesory));
+    printf("%s%s\n", "Type: ", getAccesoryType(accesory));
 }
 
 char* getAccesoryType(Accesory* accesory1) {
@@ -149,8 +153,9 @@ void productMenu(Product* pProduct, Sale* sale) {
     while(trueFalse){
         printMenu();
         int index;
-        printf("%s\n", "Choose valid option: \n");
+        printf("%s", "Choose valid option: \t");
         scanf(" %i*c",&index);
+        printf("\n");
 
         switch(index) {
             case 1:
@@ -171,17 +176,23 @@ void productMenu(Product* pProduct, Sale* sale) {
 }
 
 void printProviderInfo(Product *pProduct) {
+    printf("%s\t", "Name: ");
     printf("%s\n", pProduct->provider1->name);
+    printf("%s\t", "CIF: ");
     printf("%s\n", pProduct->provider1->CIF);
+    printf("%s\t", "Phone: ");
     printf("%s\n", pProduct->provider1->phone);
+    printf("%s\t", "Address: ");
     printf("%s\n", pProduct->provider1->address);
 }
 
 void printManufacturerInfo(Product *pProduct) {
+    printf("%s\t", "Name: ");
     printf("%s\n", pProduct->manufacturer1->name);
 }
 
 void printMenu() {
+    printf("\n");
     printf(" %d\t", 1);
     printf("%s\n", "Show info Provider");
     printf(" %d\t", 2);
