@@ -13,6 +13,7 @@ Sale* newSale(int code, double discount){
     sale->saleLineArray=malloc(sizeof(SaleLine)*10);
     sale->saleLineMaxCapacity=10;
     sale->booleanArray=malloc(sizeof(int)*10);
+    sale->time = time(0);
     for(int i=0;i<10;i++){
         sale->booleanArray[i]=0;
     }
@@ -29,7 +30,6 @@ void freeSale(Sale* sale){
 }
 
 void addProduct(Sale* sale, Product* product){
-    int hasAdded=0;
     for(int i=0;i<sale->saleLineMaxCapacity;i++){
         if(sale->booleanArray[i]==1){
             if(sale->saleLineArray[i]->product->code==product->code){

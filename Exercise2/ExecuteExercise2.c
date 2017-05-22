@@ -206,6 +206,9 @@ void printMenu() {
 
 void printSaleInfo(Sale *sale) {
     printf("\n");
+    time_t rawtime = sale->time;
+    time (&rawtime);
+    printf ("%s", ctime(&rawtime));
     printf("%s", "Products Bought ");
     printf("%s%.2f%s\n", "(discount of: ", sale->discount, "%)");
     for(int i=0; i<sale->saleLineMaxCapacity; i++){
