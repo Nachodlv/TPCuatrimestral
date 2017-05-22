@@ -40,16 +40,18 @@ void freePerson(Person* person){
 }
 
 void takeMaterial(Person* person, Material* material,Library* library, Borrow* borrow){
-    //takeOutMaterial(material);
-    //removeMaterial(library,material->code);
-    //addBorrow(library,borrow);
+    takeOutMaterial(material);
+    removeMaterial(library,material->code);
+    borrow->personCode=person->code;
+    borrow->materialName=material->title;
+    addBorrow(library,borrow);
     person->booksQuantity++;
     person->debt+=borrow->price;
 }
 
 void leaveMaterial(Person* person, Material* material, Library* library, Borrow borrow){
-    //enlistMaterial(material);
-    //addMaterial(library,material);
+    enlistMaterial(material);
+    addMaterial(library,material);
     person->booksQuantity--;
-    //freeBorrow(removeBorrow(library,borrow.code));
+    freeBorrow(removeBorrow(library,borrow.code));
 }

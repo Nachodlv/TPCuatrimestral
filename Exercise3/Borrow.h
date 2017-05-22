@@ -12,6 +12,8 @@ struct borrow{
     time_t departureDate;
     int returnDays;
     double price;
+    int personCode;
+    char* materialName;
 };
 Borrow* newBorrow(double price, int returnDays);
 void freeBorrow(Borrow* borrow);
