@@ -10,8 +10,8 @@
 
 Catalogue* newCatalogue(char* id,char* name, double discount){
     Catalogue* catalogue1 = malloc(sizeof(Catalogue));
-    catalogue1->id = malloc(sizeof(id));
-    catalogue1->name = malloc(sizeof(name));
+    catalogue1->id = malloc(sizeof(char)*(strlen(id)+1));
+    catalogue1->name = malloc(sizeof(char)*(strlen(name)+1));
     catalogue1->discount=discount;
     catalogue1->applianceArray = malloc(sizeof(Appliance)*10);
     catalogue1->applianceBooleanArray = malloc(sizeof(int)*10);

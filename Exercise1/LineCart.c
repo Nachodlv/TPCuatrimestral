@@ -10,7 +10,7 @@
 
 LineCart* newLineCart(char* id, Appliance* appliance1){
     LineCart* lineCart1 = malloc(sizeof(LineCart));
-    lineCart1->id=malloc(sizeof(id));
+    lineCart1->id=malloc(sizeof(char)*(strlen(id)+1));
     lineCart1->appliance1 =malloc(sizeof(appliance1));
     lineCart1->quantity=1;
 

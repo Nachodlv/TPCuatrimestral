@@ -9,7 +9,7 @@
 InvoiceLine* newInvoiceLine(int quantity, char* article){
     InvoiceLine* invoiceLine = malloc(sizeof(InvoiceLine));
     invoiceLine->quantity=quantity;
-    invoiceLine->article=malloc(sizeof(article));
+    invoiceLine->article=malloc(sizeof(char)*(strlen(article)+1));
     strcpy(invoiceLine->article,article);
     return invoiceLine;
 }

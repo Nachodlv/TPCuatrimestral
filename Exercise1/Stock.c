@@ -8,8 +8,8 @@
 #include "Stock.h"
 Stock* newStock(char* id, char* article){
     Stock* stock = malloc(sizeof(Stock));
-    stock->id=malloc(sizeof(id));
-    stock->article=malloc(sizeof(article));
+    stock->id=malloc(sizeof(char)*(strlen(id)+1));
+    stock->article=malloc(sizeof(char)*(strlen(article)+1));
 
     strcpy(stock->id,id);
     strcpy(stock->article,article);

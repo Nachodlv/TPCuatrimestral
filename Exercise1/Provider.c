@@ -13,12 +13,12 @@
 Provider* newProvider(char* name, char* description, char* direction, char*city, char* phone, char* web, Manufacturer* manufacturer){
     Provider* provider = malloc(sizeof(Provider));
     provider->appliancesQuantity=0;
-    provider->city=malloc(sizeof(city));
-    provider->name=malloc(sizeof(name));
-    provider->description=malloc(sizeof(description));
-    provider->direction=malloc(sizeof(direction));
-    provider->phone=malloc(sizeof(phone));
-    provider->web=malloc(sizeof(web));
+    provider->city=malloc(sizeof(char)*(strlen(city)+1));
+    provider->name=malloc(sizeof(char)*(strlen(name)+1));
+    provider->description=malloc(sizeof(char)*(strlen(description)+1));
+    provider->direction=malloc(sizeof(char)*(strlen(direction)+1));
+    provider->phone=malloc(sizeof(char)*(strlen(phone)+1));
+    provider->web=malloc(sizeof(char)*(strlen(web)+1));
     provider->manufacturer=malloc(sizeof(manufacturer));
     provider->manufacturer=newManufacturer(manufacturer->name,manufacturer->description,manufacturer->direction,manufacturer->city,manufacturer->phone,manufacturer->web);
 

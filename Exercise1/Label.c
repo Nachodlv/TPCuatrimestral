@@ -8,8 +8,8 @@
 #include "Label.h"
 Label* newLabel(char* id, char* name){
     Label* label = malloc(sizeof(Label));
-    label->id=malloc(sizeof(id));
-    label->name=malloc(sizeof(name));
+    label->id=malloc(sizeof(char)*(strlen(id)+1));
+    label->name=malloc(sizeof(char)*(strlen(name)+1));
 
     strcpy(label->id,id);
     strcpy(label->name,name);

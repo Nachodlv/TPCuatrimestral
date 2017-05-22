@@ -11,12 +11,12 @@
 Manufacturer* newManufacturer(char* name, char* description, char* direction, char*city, char* phone, char* web){
     Manufacturer* manufacturer = malloc(sizeof(Manufacturer));
     manufacturer->createdAppliances=0;
-    manufacturer->city=malloc(sizeof(city));
-    manufacturer->name=malloc(sizeof(name));
-    manufacturer->description=malloc(sizeof(description));
-    manufacturer->direction=malloc(sizeof(direction));
-    manufacturer->phone=malloc(sizeof(phone));
-    manufacturer->web=malloc(sizeof(web));
+    manufacturer->city=malloc(sizeof(char)*(strlen(city)+1));
+    manufacturer->name=malloc(sizeof(char)*(strlen(name)+1));
+    manufacturer->description=malloc(sizeof(char)*(strlen(description)+1));
+    manufacturer->direction=malloc(sizeof(char)*(strlen(direction)+1));
+    manufacturer->phone=malloc(sizeof(char)*(strlen(phone)+1));
+    manufacturer->web=malloc(sizeof(char)*(strlen(web)+1));
 
     strcpy(manufacturer->city,city);
     strcpy(manufacturer->name,name);

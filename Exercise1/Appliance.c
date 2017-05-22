@@ -11,8 +11,8 @@ Appliance* newAppliance(char* name, char* model, double price, double discount, 
     Appliance* appliance = malloc(sizeof(Appliance));
     appliance->discount=discount;
     appliance->price=price;
-    appliance->model = malloc(sizeof(model));
-    appliance->name = malloc(sizeof(name));
+    appliance->model = malloc(sizeof(char)*(strlen(model)+1));
+    appliance->name = malloc(sizeof(char)*(strlen(name)+1));
     appliance->provider = malloc(sizeof(provider1));
     appliance->label = malloc(sizeof(Label));
     appliance->label = newLabel(name,model);
