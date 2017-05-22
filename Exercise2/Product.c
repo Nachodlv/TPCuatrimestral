@@ -7,9 +7,9 @@
 
 Product* newProduct(char* name, int code, double price, char* photo, Provider* provider1, Manufacturer* manufacturer1){
     Product* product = malloc(sizeof(Product));
-    product->name = malloc(sizeof(name));
+    product->name = malloc(sizeof(char)*(strlen(name)+1));
     product->code = code;
-    product->photo = malloc(sizeof(photo));
+    product->photo = malloc(sizeof(char)*(strlen(photo)+1));
     product->manufacturer1 = malloc(sizeof(provider1));
     product->provider1 = malloc(sizeof(manufacturer1));
     product->price=price;

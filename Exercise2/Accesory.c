@@ -7,7 +7,7 @@
 
 Accesory* newAccesory(int accesoryType, char* comment, int code){
     Accesory* accesory = malloc(sizeof(Accesory));
-    accesory->comment = malloc(sizeof(comment));
+    accesory->comment = malloc(sizeof(char)*(strlen(comment)+1));
     accesory->accesoryType=accesoryType;
     accesory->code=code;
     strcpy(accesory->comment,comment);

@@ -7,7 +7,7 @@
 
 Manufacturer* newManufacturerExercise2(char* name, int code){
     Manufacturer* manufacturer = malloc(sizeof(Manufacturer));
-    manufacturer->name = malloc(sizeof(name));
+    manufacturer->name = malloc(sizeof(char)*(strlen(name)+1));
     manufacturer->code=code;
     strcpy(manufacturer->name,name);
     return manufacturer;

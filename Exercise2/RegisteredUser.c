@@ -7,14 +7,14 @@
 #include <memory.h>
 RegisteredUser* newResgisteredUser(char* name, char* dni, char* address, char* phone, char* location, char* province, char* country, char* postalCode){
     RegisteredUser* registeredUser1 = malloc(sizeof(RegisteredUser));
-    registeredUser1->dni = malloc(sizeof(dni));
-    registeredUser1->name = malloc(sizeof(name));
-    registeredUser1->phone = malloc(sizeof(phone));
-    registeredUser1->address = malloc(sizeof(address));
-    registeredUser1->location = malloc(sizeof(location));
-    registeredUser1->province = malloc(sizeof(province));
-    registeredUser1->country = malloc(sizeof(country));
-    registeredUser1->postalCode = malloc(sizeof(postalCode));
+    registeredUser1->dni = malloc(sizeof(char)*(strlen(dni)+1));
+    registeredUser1->name = malloc(sizeof(char)*(strlen(name)+1));
+    registeredUser1->phone = malloc(sizeof(char)*(strlen(phone)+1));
+    registeredUser1->address = malloc(sizeof(char)*(strlen(address)+1));
+    registeredUser1->location = malloc(sizeof(char)*(strlen(location)+1));
+    registeredUser1->province = malloc(sizeof(char)*(strlen(province)+1));
+    registeredUser1->country = malloc(sizeof(char)*(strlen(country)+1));
+    registeredUser1->postalCode = malloc(sizeof(char)*(strlen(postalCode)+1));
     strcpy(registeredUser1->dni,dni);
     strcpy(registeredUser1->name,name);
     strcpy(registeredUser1->phone,phone);

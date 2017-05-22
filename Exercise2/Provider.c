@@ -7,16 +7,16 @@
 #include <memory.h>
 Provider* newProviderExercise2(char* CIF, char* name, char* responsable, char* phone, char* address, char* location, char* province, char* country, char* postalCode, char* fax){
     Provider* provider1 = malloc(sizeof(Provider));
-    provider1->CIF = malloc(sizeof(CIF));
-    provider1->name = malloc(sizeof(name));
-    provider1->responsable = malloc(sizeof(responsable));
-    provider1->phone = malloc(sizeof(phone));
-    provider1->address = malloc(sizeof(address));
-    provider1->location = malloc(sizeof(location));
-    provider1->province = malloc(sizeof(province));
-    provider1->country = malloc(sizeof(country));
-    provider1->postalCode = malloc(sizeof(postalCode));
-    provider1->fax = malloc(sizeof(fax));
+    provider1->CIF = malloc(sizeof(char)*(strlen(CIF)+1));
+    provider1->name = malloc(sizeof(char)*(strlen(name)+1));
+    provider1->responsable = malloc(sizeof(char)*(strlen(responsable)+1));
+    provider1->phone = malloc(sizeof(char)*(strlen(phone)+1));
+    provider1->address = malloc(sizeof(char)*(strlen(address)+1));
+    provider1->location = malloc(sizeof(char)*(strlen(location)+1));
+    provider1->province = malloc(sizeof(char)*(strlen(province)+1));
+    provider1->country = malloc(sizeof(char)*(strlen(country)+1));
+    provider1->postalCode = malloc(sizeof(char)*(strlen(postalCode)+1));
+    provider1->fax = malloc(sizeof(char)*(strlen(fax)+1));
     strcpy(provider1->CIF,CIF);
     strcpy(provider1->name,name);
     strcpy(provider1->responsable,responsable);
