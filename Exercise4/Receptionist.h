@@ -6,6 +6,8 @@
 #define TPCUATRIMESTRAL_RECEPTIONIST_H
 
 #include "Client.h"
+#include "Hotel.h"
+
 typedef struct receptionist Receptionist;
 struct receptionist{
     Reservation** reservationArray;
@@ -16,5 +18,6 @@ struct receptionist{
     int dni;
 };
 Receptionist* newReceptionist(char* name,int dni, Hotel* hotel);
-
+int checkIn(Client* client, Receptionist receptionist);
+void makeReservation(Client* client, int roomNumber, Receptionist* receptionist );
 #endif //TPCUATRIMESTRAL_RECEPTIONIST_H

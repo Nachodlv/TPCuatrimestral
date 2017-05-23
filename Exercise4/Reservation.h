@@ -4,6 +4,8 @@
 
 #ifndef TPCUATRIMESTRAL_RESERVATION_H
 #define TPCUATRIMESTRAL_RESERVATION_H
+
+#include "Client.h"
 typedef struct reservation Reservation;
 struct reservation{
     char* clientNumber;
@@ -11,6 +13,6 @@ struct reservation{
     int roomNumber;
     int daysToStay;
 };
-Reservation* newReservation(Client* cliet, int roomNumber);
+Reservation* newReservation(Client* client, int roomNumber);
 void freeReservation(Reservation* reservation);
 #endif //TPCUATRIMESTRAL_RESERVATION_H
