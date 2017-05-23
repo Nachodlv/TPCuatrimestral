@@ -10,7 +10,7 @@ void printFirstMenu();
 
 Person* studentsOrTeachers(Library* library1, int amountOfStudents, int amountOfTeachers);
 Borrow *chooseBorrow(Library* library, int personCode);
-void printBorrow(Borrow** pBorrow, int amount);
+
 int getIndex();
 void actionsPerson(Library* library, Person* person, int amountOfBooks, int amountOfMagazines);
 void printStudents(Library *pLibrary, int amount);
@@ -21,7 +21,8 @@ Material* chooseMaterial(Library* library, int amountOfBooks, int amountOfMagazi
 void printMagOrBook();
 void printBooks(Library *pLibrary, int amount);
 void printMagazines(Library *pLibrary, int amount);
-
+Borrow* generateBorrow(Library* library, Material* material);
+void printBorrow(Borrow* pBorrow);
 
 
 #endif //TPCUATRIMESTRAL_EXECUTEEXERCISE3_H

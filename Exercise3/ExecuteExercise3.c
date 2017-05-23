@@ -12,6 +12,10 @@
 
 void printActions();
 
+void printPersonDetails(Person *pPerson);
+
+Material* material1;
+
 int executeExercise3(){
     Library* library = newLibrary();
 
@@ -76,7 +80,7 @@ int getIndex() {
 }
 
 void printStudents(Library *pLibrary, int amount) {
-    printf("\n%s", "Students:");
+    printf("%s", "Students:");
     printf("\n");
     for(int i=0; i<amount; i++){
         if(pLibrary->personBooleanArray[i]==1 && pLibrary->personArray[i]->personType==1) {
@@ -106,7 +110,8 @@ void actionsPerson(Library* library, Person* person, int amountOfBooks, int amou
                 borrowMenu(library, person);
                 break;
             case 2:
-                takeMaterial(person, chooseMaterial(library, amountOfBooks, amountOfMagazines), library, newBorrow(100, 2));
+                material1 = chooseMaterial(library, amountOfBooks, amountOfMagazines);
+                takeMaterial(person, material1, library, generateBorrow(library, material1));
                 break;
             case 3:
                 trueFalse = 0;
@@ -117,8 +122,14 @@ void actionsPerson(Library* library, Person* person, int amountOfBooks, int amou
     }
 }
 
+Borrow* generateBorrow(Library* library, Material* material) {
+    Borrow* borrow = newBorrow(100, 2, material->title);
+    addBorrow(library, borrow, material);
+    return borrow;
+}
 
 void printActions() {
+    printf("\n");
     printf(" %d\t", 1);
     printf("%s\n", "Leave material");
     printf(" %d\t", 2);
@@ -127,45 +138,33 @@ void printActions() {
     printf("%s\n", "Exit");
 }
 
-
 void borrowMenu(Library* library, Person* person) {
     Borrow* borrow = chooseBorrow(library,person->code);
+    printBorrow(borrow);
     leaveMaterial(person, getMaterial(library,borrow->materialName), library, borrow);
 }
 
-Borrow *chooseBorrow(Library* library, int personCode) {
-    Borrow** borrowArray = malloc(sizeof(Borrow)*library->borrowMaxCapacity);
-    int quantity =0;
-    for(int i=0;i<library->borrowMaxCapacity;i++){
+Borrow* chooseBorrow(Library* library, int personCode) {
+    Borrow** bArray = library->borrowArray;
+    for(int i=0; i<library->borrowMaxCapacity; i++){
         if(library->borrowBooleanArray[i]==1){
-            if(library->borrowArray[i]->personCode==personCode){
-                borrowArray[i]=newBorrow(borrowArray[i]->price,library->borrowArray[i]->returnDays);
-                quantity++;
+            if(library->borrowArray[i]->personCode == personCode){
+                printf(" %d\t", i+1);
+                printf("Material name: %s\n", bArray[i]->materialName);
             }
         }
     }
-    borrowArray = realloc(borrowArray, sizeof(Borrow)*quantity);
-
-    printBorrow(borrowArray, quantity);
-    return borrowArray[getIndex()];
-
+    return bArray[getIndex()-1];
 }
 
-void printBorrow(Borrow** pBorrow, int amount) {
+void printBorrow(Borrow* pBorrow) {
     printf("\n%s", "Borrows:\n");
-    for(int i=0; i<amount; i++){
-        printf(" %d\t", i);
-        printf("Material name: %s\n", pBorrow[i]->materialName);
-        printf("Price: %f\n", pBorrow[i]->price);
-        printf("%s", "Borrowed in:");
-        time_t rawtime = pBorrow[i]->departureDate;
-        time (&rawtime);
-        printf ("%s", ctime(&rawtime));
-        double diff_t;
-        diff_t = difftime(time(0), rawtime);
-        printf("You returned your material %f%s\n", (diff_t)/3600, "hours after you borrowed it");
-        printf("%s%d%s", "You had:", pBorrow[i]->returnDays*60, "hours");
-    }
+    printf("Price: %.1f%s\n", pBorrow->price, "$");
+    double diff_t;
+    diff_t = difftime(time(0), pBorrow->departureDate);
+    printf("You returned your material %.0f%s\n", (diff_t), " seconds after you borrowed it");
+    printf("%s%.d%s", "You had: ", pBorrow->returnDays*60, " hours");
+    printf("\n");
 }
 
 Material* chooseMaterial(Library* library, int amountOfBooks, int amountOfMagazines) {

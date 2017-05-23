@@ -15,7 +15,8 @@ struct borrow{
     int personCode;
     char* materialName;
 };
-Borrow* newBorrow(double price, int returnDays);
+Borrow* newBorrow(double price, int returnDays, char* materialName);
 void freeBorrow(Borrow* borrow);
+
 
 #endif //TPCUATRIMESTRAL_BORROW_H

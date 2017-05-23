@@ -29,7 +29,7 @@ Library* newLibrary ();
 void freeLibrary(Library* library);
 void addMaterial(Library* library, Material* material);
 void addPerson(Library* library, Person* person);
-void addBorrow(Library* library, Borrow* borrow);
+
 Material* removeMaterial(Library* library,int materialCode);
 Person* removePerson(Library* library,int personCode);
 Borrow* removeBorrow(Library* library, int idBorrow);
@@ -38,4 +38,5 @@ Material* getMaterial(Library* library, char* materialName);
 void increaseMaterialArray(Library* library);
 void increaseBorrowArray(Library* library);
 void increasePersonArray(Library* library);
+void addBorrow(Library* library, Borrow* borrow, Material* material);
 #endif //TPCUATRIMESTRAL_LIBRARY_H

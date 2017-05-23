@@ -9,10 +9,10 @@ Material* newBook(int code, char* author, char* title, int year, char* editorial
     Material* material = malloc(sizeof(Material));
     material->materialType=1;
     material->code=code;
-    material->author=malloc(sizeof(char)*strlen(author));
-    material->title=malloc(sizeof(char)*strlen(title));
+    material->author=malloc(sizeof(char)*strlen(author)+1);
+    material->title=malloc(sizeof(char)*strlen(title)+1);
     material->year=year;
-    material->editorial=malloc(sizeof(char)*strlen(editorial));
+    material->editorial=malloc(sizeof(char)*strlen(editorial)+1);
     strcpy(material->author,author);
     strcpy(material->title,title);
     strcpy(material->editorial,editorial);
@@ -23,9 +23,9 @@ Material* newMagazine(int code, char* title, int year, char* editorial){
     Material* material = malloc(sizeof(Material));
     material->materialType=2;
     material->code=code;
-    material->title=malloc(sizeof(title));
+    material->title=malloc(sizeof(title)+1);
     material->year=year;
-    material->editorial=malloc(sizeof(editorial));
+    material->editorial=malloc(sizeof(editorial)+1);
     strcpy(material->title,title);
     strcpy(material->editorial,editorial);
     return material;

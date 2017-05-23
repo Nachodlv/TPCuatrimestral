@@ -10,8 +10,8 @@
 Person* newStudent(char* name,char* mail, int phone, int code, int enrollment){
     Person* person = malloc(sizeof(Person));
     person->personType=1;
-    person->name=malloc(sizeof(char)*strlen(name));
-    person->mail=malloc(sizeof(char)*strlen(mail));
+    person->name=malloc(sizeof(char)*strlen(name)+1);
+    person->mail=malloc(sizeof(char)*strlen(mail)+1);
     person->phone=phone;
     person->code=code;
     person->enrollment=enrollment;
@@ -23,8 +23,8 @@ Person* newStudent(char* name,char* mail, int phone, int code, int enrollment){
 Person* newTeacher(char* name, char* mail, int phone, int code, int employeeNumber){
     Person* person =malloc(sizeof(Person));
     person->personType=2;
-    person->name=malloc(sizeof(name));
-    person->mail=malloc(sizeof(mail));
+    person->name=malloc(sizeof(char)*strlen(name)+1);
+    person->mail=malloc(sizeof(char)*strlen(mail)+1);
     person->phone=phone;
     person->code=code;
     person->employeeNumber=employeeNumber;
@@ -44,7 +44,6 @@ void takeMaterial(Person* person, Material* material,Library* library, Borrow* b
     removeMaterial(library,material->code);
     borrow->personCode=person->code;
     borrow->materialName=material->title;
-    addBorrow(library,borrow);
     person->booksQuantity++;
     person->debt+=borrow->price;
 }

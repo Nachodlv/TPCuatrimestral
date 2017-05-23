@@ -73,9 +73,9 @@ void increaseMaterialArray(Library* library){
     library->materialMaxCapacity=library->materialMaxCapacity*2;
 }
 
-Material* removeMaterial(Library* library,int materialCode){
+Material* removeMaterial(Library* library, int materialCode){
     for(int i=0;i<library->materialMaxCapacity;i++){
-        if(library->materialBooleanArray[i]==0){
+        if(library->materialBooleanArray[i]==1){
             if(library->materialArray[i]->code==materialCode)
                 library->materialBooleanArray[i]=0;
                 return library->materialArray[i];
@@ -121,21 +121,21 @@ void increasePersonArray(Library* library){
     library->personMaxCapacity=library->personMaxCapacity*2;
 }
 
-void addBorrow(Library* library, Borrow* borrow){
+void addBorrow(Library* library, Borrow* borrow, Material* material){
     for(int i=0;i<library->borrowMaxCapacity;i++){
         if(library->borrowBooleanArray[i]==0){
-            library->borrowArray[i]=newBorrow(borrow->price,borrow->returnDays);
+            library->borrowArray[i]=borrow;
             library->borrowBooleanArray[i]=1;
             return;
         }
     }
     increaseBorrowArray(library);
-    addBorrow(library,borrow);
+    addBorrow(library,borrow, material);
 }
 
 Borrow* removeBorrow(Library* library, int idBorrow){
     for(int i=0;i<library->borrowMaxCapacity;i++){
-        if(library->borrowBooleanArray[i]==0){
+        if(library->borrowBooleanArray[i]==1){
             if(library->borrowArray[i]->code==idBorrow)
                 library->borrowBooleanArray[i]=0;
                 return library->borrowArray[i];

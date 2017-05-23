@@ -6,11 +6,12 @@
 #include <stdlib.h>
 
 
-Borrow* newBorrow(double price, int returnDays){
+Borrow* newBorrow(double price, int returnDays, char* materialName){
     Borrow* borrow = malloc(sizeof(Borrow));
     borrow->price=price;
     borrow->departureDate=time(0);
     borrow->returnDays=returnDays;
+    borrow->materialName = materialName;
     return borrow;
 }
 
