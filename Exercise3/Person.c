@@ -49,9 +49,9 @@ void takeMaterial(Person* person, Material* material,Library* library, Borrow* b
     person->debt+=borrow->price;
 }
 
-void leaveMaterial(Person* person, Material* material, Library* library, Borrow borrow){
+void leaveMaterial(Person* person, Material* material, Library* library, Borrow* borrow){
     enlistMaterial(material);
     addMaterial(library,material);
     person->booksQuantity--;
-    freeBorrow(removeBorrow(library,borrow.code));
+    freeBorrow(removeBorrow(library,borrow->code));
 }

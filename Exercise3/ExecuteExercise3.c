@@ -41,7 +41,6 @@ int executeExercise3(){
     addMaterial(library, magazine1);
 
 
-
     printFirstMenu();
     actionsPerson(library, studentsOrTeachers(library, amountOfStudents, amountOfTeachers));
 
@@ -104,11 +103,10 @@ void actionsPerson(Library* library, Person* person) {
         printActions();
         switch (getIndex()) {
             case 1:
-                Borrow* borrow = chooseBorrow(library,person->code);
-                leaveMaterial(person, getMaterial(library,borrow->materialName), library, borrow); //personas no tienen material...
+                borrowMenu(library, person);
                 break;
             case 2:
-                takeMaterial(person, chooseMaterial(library), library, newBorrow(100, 2));
+                //takeMaterial(person, chooseMaterial(library), library, newBorrow(100, 2));
                 break;
             case 3:
                 trueFalse = 0;
@@ -121,6 +119,7 @@ void actionsPerson(Library* library, Person* person) {
 }
 
 
+
 void printActions() {
     printf(" %d\t", 1);
     printf("%s\n", "Leave material");
@@ -130,6 +129,11 @@ void printActions() {
     printf("%s\n", "Exit");
 }
 
+
+void borrowMenu(Library* library, Person* person) {
+    Borrow* borrow = chooseBorrow(library,person->code);
+    leaveMaterial(person, getMaterial(library,borrow->materialName), library, borrow);
+}
 
 Borrow *chooseBorrow(Library* library, int personCode) {
     Borrow** borrowArray = malloc(sizeof(Borrow)*library->borrowMaxCapacity);
@@ -144,4 +148,26 @@ Borrow *chooseBorrow(Library* library, int personCode) {
     }
     borrowArray = realloc(borrowArray, sizeof(Borrow)*quantity);
 
+    printBorrow(borrowArray, quantity);
+    return borrowArray[getIndex()];
+
 }
+
+void printBorrow(Borrow** pBorrow, int amount) {
+    printf("\n%s", "Borrows:");
+    for(int i=0; i<amount; i++){
+        printf(" %d\t", i);
+        printf("Material name: %s\n", pBorrow[i]->materialName);
+        printf("Price: %f\n", pBorrow[i]->price);
+        printf("%s", "Borrowed in:");
+        time_t rawtime = pBorrow[i]->departureDate;
+        time (&rawtime);
+        printf ("%s", ctime(&rawtime));
+        double diff_t;
+        diff_t = difftime(time(0), rawtime);
+        printf("You returned your material %f%s\n", (diff_t)/3600, "hours after you borrowed it");
+        printf("%s%d%s", "You had:", pBorrow[i]->returnDays*60, "hours");
+    }
+}
+
+
