@@ -10,8 +10,8 @@
 Person* newStudent(char* name,char* mail, int phone, int code, int enrollment){
     Person* person = malloc(sizeof(Person));
     person->personType=1;
-    person->name=malloc(sizeof(name));
-    person->mail=malloc(sizeof(mail));
+    person->name=malloc(sizeof(char)*strlen(name));
+    person->mail=malloc(sizeof(char)*strlen(mail));
     person->phone=phone;
     person->code=code;
     person->enrollment=enrollment;

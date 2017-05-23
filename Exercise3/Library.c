@@ -50,6 +50,7 @@ void freeLibrary(Library* library){
 void addMaterial(Library* library, Material* material){
     for(int i=0;i<library->materialMaxCapacity;i++){
         if(library->materialBooleanArray[i]==0){
+            library->materialBooleanArray[i]=1;
             if(material->materialType==1) {
                 library->materialArray[i] = newBook(material->code, material->author, material->title, material->year, material->editorial);
                 return;
@@ -75,7 +76,9 @@ void increaseMaterialArray(Library* library){
 Material* removeMaterial(Library* library,int materialCode){
     for(int i=0;i<library->materialMaxCapacity;i++){
         if(library->materialBooleanArray[i]==0){
-            if(library->materialArray[i]->code==materialCode) return library->materialArray[i];
+            if(library->materialArray[i]->code==materialCode)
+                library->materialBooleanArray[i]=0;
+                return library->materialArray[i];
         }
     }
     exit(2);
@@ -84,6 +87,7 @@ Material* removeMaterial(Library* library,int materialCode){
 void addPerson(Library* library, Person* person){
     for(int i=0;i<library->personMaxCapacity;i++){
         if(library->personBooleanArray[i]==0){
+            library->personBooleanArray[i]=1;
             if(person->personType==1) {
                 library->personArray[i] = newStudent(person->name,person->mail,person->phone,person->code,person->enrollment);
                 return;
@@ -100,7 +104,9 @@ void addPerson(Library* library, Person* person){
 Person* removePerson(Library* library,int personCode){
     for(int i=0;i<library->personMaxCapacity;i++){
         if(library->personBooleanArray[i]==0){
-            if(library->personArray[i]->code==personCode) return library->personArray[i];
+            if(library->personArray[i]->code==personCode)
+                library->personBooleanArray[i]=0;
+                return library->personArray[i];
         }
     }
     exit(2);
