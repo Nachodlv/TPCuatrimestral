@@ -9,6 +9,10 @@
 
 int getStudentOrTeacher();
 
+void printActions();
+
+Borrow *chooseBorrow(Borrow **pBorrow);
+
 int executeExercise3(){
     Library* library = newLibrary();
 
@@ -39,12 +43,17 @@ int executeExercise3(){
 
 
     printFirstMenu();
-    printStudentsOrTeachers(library, amountOfStudents, amountOfTeachers);
+    actionsPerson(library, studentsOrTeachers(library, amountOfStudents, amountOfTeachers));
+
+
+
+    
 
 
 
     return 1;
 }
+
 
 void printFirstMenu(){
     printf(" %d\t", 1);
@@ -53,18 +62,19 @@ void printFirstMenu(){
     printf("%s\n", "Print Teachers");
 }
 
-void printStudentsOrTeachers(Library* library1, int amountOfStudents, int amountOfTeachers){
-    switch(getStudentOrTeacher()){
+Person* studentsOrTeachers(Library* library1, int amountOfStudents, int amountOfTeachers){
+    int i = getIndex();
+    switch(i){
         case 1: printStudents(library1, amountOfStudents);
             break;
         case 2: printTeachers(library1, amountOfTeachers);
             break;
         default: break;
     }
+    return library1->personArray[i];
 }
 
-
-int getStudentOrTeacher() {
+int getIndex() {
     int index;
     printf("%s", "Choose valid option: \t");
     scanf(" %i*c",&index);
@@ -75,15 +85,56 @@ int getStudentOrTeacher() {
 void printStudents(Library *pLibrary, int amount) {
     printf("\n%s\n", "Students:");
     for(int i=0; i<amount; i++){
-        if(pLibrary->personBooleanArray[i]==1 && pLibrary->personArray[i]->personType==1){}
+        if(pLibrary->personBooleanArray[i]==1 && pLibrary->personArray[i]->personType==1) {
+            printf(" %d\t", i);
             printf("%s", pLibrary->personArray[i]->name);
+        }
     }
 }
 
 void printTeachers(Library *pLibrary, int amount) {
-    printf("\n%s\n", "Teachers:");
+    printf("\n%s", "Teachers:");
     for(int i=0; i<amount; i++){
-        if(pLibrary->personBooleanArray[i]==1 && pLibrary->personArray[i]->personType==2){}
-        printf("%s", pLibrary->personArray[i]->name);
+        if(pLibrary->personBooleanArray[i]==1 && pLibrary->personArray[i]->personType==2) {
+            printf(" %d\t", i);
+            printf("%s", pLibrary->personArray[i]->name);
+        }
     }
+}
+
+void actionsPerson(Library* library, Person* person) {
+    int trueFalse = 1;
+    while (trueFalse) {
+        printActions();
+        switch (getIndex()) {
+            case 1:
+                Borrow* borrow = chooseBorrow(getBorrows(library,person->code));
+                leaveMaterial(person, getMaterial(library,borrow->materialName), library, borrow; //personas no tienen material...
+                break;
+            case 2:
+                takeMaterial(person, chooseMaterial(library), library, newBorrow(100, 2));
+                break;
+            case 3:
+                trueFalse = 0;
+                break;
+            default:
+                break;
+        }
+    }
+
+}
+
+
+void printActions() {
+    printf(" %d\t", 1);
+    printf("%s\n", "Leave material");
+    printf(" %d\t", 2);
+    printf("%s\n", "Take material");
+    printf(" %d\t", 3);
+    printf("%s\n", "Exit");
+}
+
+
+Borrow *chooseBorrow(Borrow** borrow) {
+    return NULL;
 }

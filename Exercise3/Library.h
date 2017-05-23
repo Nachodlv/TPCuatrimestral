@@ -35,6 +35,7 @@ Material* removeMaterial(Library* library,int materialCode);
 Person* removePerson(Library* library,int personCode);
 Borrow* removeBorrow(Library* library, int idBorrow);
 int generateBorrowCode(Library* library);
+Material* getMaterial(Library* library, char* materialName);
 void increaseMaterialArray(Library* library);
 void increaseBorrowArray(Library* library);
 void increasePersonArray(Library* library);
