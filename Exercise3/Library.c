@@ -4,6 +4,7 @@
 
 #include "Library.h"
 #include <stdlib.h>
+#include <memory.h>
 
 Library* newLibrary (){
     Library* library = malloc(sizeof(Library));
@@ -149,17 +150,11 @@ int generateBorrowCode(Library* library){
     return code;
 }
 
-Borrow** getBorrows(Library* library, int personCode){
-    Borrow** borrowArray = malloc(sizeof(Borrow)*library->borrowMaxCapacity);
-    int quantity =0;
-    for(int i=0;i<library->borrowMaxCapacity;i++){
-        if(library->borrowBooleanArray[i]==1){
-            if(library->borrowArray[i]->personCode==personCode){
-                borrowArray[i]=newBorrow(borrowArray[i]->price,library->borrowArray[i]->returnDays);
-                quantity++;
-            }
+Material* getMaterial(Library* library, char* materialName){
+    for(int i=0;i<library->materialMaxCapacity;i++){
+        if(library->materialBooleanArray[i]==1){
+            if(strcmp(library->materialArray[i]->title,materialName)) return library->materialArray[i];
         }
     }
-    borrowArray = realloc(borrowArray, sizeof(Borrow)*quantity);
-    return borrowArray;
+    exit(2);
 }
