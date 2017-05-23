@@ -9,7 +9,6 @@
 #include "Person.h"
 #include "Library.h"
 
-int getStudentOrTeacher();
 
 void printActions();
 
@@ -42,9 +41,8 @@ int executeExercise3(){
 
 
     printFirstMenu();
-    actionsPerson(library, studentsOrTeachers(library, amountOfStudents, amountOfTeachers));
-
-
+    Person* person = studentsOrTeachers(library, amountOfStudents, amountOfTeachers);
+    actionsPerson(library, person, amountOfBooks, amountOfMagazines);
 
     return 1;
 }
@@ -60,13 +58,13 @@ void printFirstMenu(){
 Person* studentsOrTeachers(Library* library1, int amountOfStudents, int amountOfTeachers){
     int i = getIndex();
     switch(i){
-        case 1: printStudents(library1, amountOfStudents);
+        case 1: printStudents(library1, amountOfStudents+amountOfTeachers);
             break;
-        case 2: printTeachers(library1, amountOfTeachers);
+        case 2: printTeachers(library1, amountOfTeachers+amountOfStudents);
             break;
         default: break;
     }
-    return library1->personArray[i];
+    return library1->personArray[getIndex()-1];
 }
 
 int getIndex() {
@@ -78,26 +76,28 @@ int getIndex() {
 }
 
 void printStudents(Library *pLibrary, int amount) {
-    printf("\n%s\n", "Students:");
+    printf("\n%s", "Students:");
+    printf("\n");
     for(int i=0; i<amount; i++){
         if(pLibrary->personBooleanArray[i]==1 && pLibrary->personArray[i]->personType==1) {
-            printf(" %d\t", i);
-            printf("%s", pLibrary->personArray[i]->name);
+            printf(" %d\t", i+1);
+            printf("%s\n", pLibrary->personArray[i]->name);
         }
     }
 }
 
 void printTeachers(Library *pLibrary, int amount) {
     printf("\n%s", "Teachers:");
+    printf("\n");
     for(int i=0; i<amount; i++){
         if(pLibrary->personBooleanArray[i]==1 && pLibrary->personArray[i]->personType==2) {
-            printf(" %d\t", i);
-            printf("%s", pLibrary->personArray[i]->name);
+            printf(" %d\t", i+1);
+            printf("%s\n", pLibrary->personArray[i]->name);
         }
     }
 }
 
-void actionsPerson(Library* library, Person* person) {
+void actionsPerson(Library* library, Person* person, int amountOfBooks, int amountOfMagazines) {
     int trueFalse = 1;
     while (trueFalse) {
         printActions();
@@ -106,7 +106,7 @@ void actionsPerson(Library* library, Person* person) {
                 borrowMenu(library, person);
                 break;
             case 2:
-                //takeMaterial(person, chooseMaterial(library), library, newBorrow(100, 2));
+                takeMaterial(person, chooseMaterial(library, amountOfBooks, amountOfMagazines), library, newBorrow(100, 2));
                 break;
             case 3:
                 trueFalse = 0;
@@ -115,9 +115,7 @@ void actionsPerson(Library* library, Person* person) {
                 break;
         }
     }
-
 }
-
 
 
 void printActions() {
@@ -154,7 +152,7 @@ Borrow *chooseBorrow(Library* library, int personCode) {
 }
 
 void printBorrow(Borrow** pBorrow, int amount) {
-    printf("\n%s", "Borrows:");
+    printf("\n%s", "Borrows:\n");
     for(int i=0; i<amount; i++){
         printf(" %d\t", i);
         printf("Material name: %s\n", pBorrow[i]->materialName);
@@ -170,4 +168,52 @@ void printBorrow(Borrow** pBorrow, int amount) {
     }
 }
 
+Material* chooseMaterial(Library* library, int amountOfBooks, int amountOfMagazines) {
+    printMagOrBook();
+    int i = getIndex();
+    switch(i){
+        case 1: printBooks(library, amountOfBooks+amountOfMagazines);
+            break;
+        case 2: printMagazines(library, amountOfMagazines+amountOfBooks);
+            break;
+        case 3: break;
+        default: break;
+    }
+    return library->materialArray[getIndex()-1];
+}
+
+void printMagOrBook(){
+    printf(" %d\t", 1);
+    printf("%s\n", "Print Books");
+    printf(" %d\t", 2);
+    printf("%s\n", "Print Magazines");
+    printf(" %d\t", 3);
+    printf("%s\n", "Exit");
+
+}
+
+void printBooks(Library *pLibrary, int amount) {
+    printf("\n%s", "Books:");
+    printf("\n");
+    for(int i=0; i<amount; i++){
+        if(pLibrary->materialBooleanArray[i]==1 && pLibrary->materialArray[i]->materialType==1) {
+            printf(" %d\t", i+1);
+            printf("Title: %s\n", pLibrary->materialArray[i]->title);
+            printf("Author: %s\n", pLibrary->materialArray[i]->author);
+            printf("\n");
+        }
+    }
+}
+
+void printMagazines(Library *pLibrary, int amount) {
+    printf("\n%s", "Magazines:");
+    printf("\n");
+    for(int i=0; i<amount; i++){
+        if(pLibrary->materialBooleanArray[i]==1 && pLibrary->materialArray[i]->materialType==2) {
+            printf(" %d\t", i+1);
+            printf("Title: %s\n", pLibrary->materialArray[i]->title);
+            printf("\n");
+        }
+    }
+}
 

@@ -7,16 +7,20 @@
 #include "Library.h"
 
 void printFirstMenu();
-void actionsPerson(Library* library, Person* person);
+
 Person* studentsOrTeachers(Library* library1, int amountOfStudents, int amountOfTeachers);
 Borrow *chooseBorrow(Library* library, int personCode);
 void printBorrow(Borrow** pBorrow, int amount);
 int getIndex();
+void actionsPerson(Library* library, Person* person, int amountOfBooks, int amountOfMagazines);
 void printStudents(Library *pLibrary, int amount);
 void printTeachers(Library *pLibrary, int amount);
-void actionsPerson(Library* library, Person* person);
 void borrowMenu(Library* library, Person* person);
 int executeExercise3();
+Material* chooseMaterial(Library* library, int amountOfBooks, int amountOfMagazines);
+void printMagOrBook();
+void printBooks(Library *pLibrary, int amount);
+void printMagazines(Library *pLibrary, int amount);
 
 
 
