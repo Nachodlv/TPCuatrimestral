@@ -118,10 +118,11 @@ void addBorrow(Library* library, Borrow* borrow){
     for(int i=0;i<library->borrowMaxCapacity;i++){
         if(library->borrowBooleanArray[i]==0){
             library->borrowArray[i]=newBorrow(borrow->price,borrow->returnDays);
+            return;
         }
     }
     increaseBorrowArray(library);
-    addBorrow(library,borrow;
+    addBorrow(library,borrow);
 }
 
 Borrow* removeBorrow(Library* library, int idBorrow){

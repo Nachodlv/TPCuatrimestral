@@ -27,5 +27,5 @@ Person* newStudent(char* name,char* mail, int phone,int code, int enrollment);
 Person* newTeacher(char* name, char* mail, int phone,int code, int employeeNumber);
 void freePerson(Person* person);
 void takeMaterial(Person* person, Material* material, Library* library, Borrow* borrow);
-void leaveMaterial(Person* person, Material* material, Library* library, Borrow borrow);
+void leaveMaterial(Person* person, Material* material, Library* library, Borrow* borrow);
 #endif //TPCUATRIMESTRAL_PERSON_H

@@ -2,16 +2,16 @@
 // Created by Ignacio on 19/5/2017.
 //
 
-#include <printf.h>
+
 #include "ExecuteExercise3.h"
+#include <stdio.h>
+#include <stdlib.h>
 #include "Person.h"
 #include "Library.h"
 
 int getStudentOrTeacher();
 
 void printActions();
-
-Borrow *chooseBorrow(Borrow **pBorrow);
 
 int executeExercise3(){
     Library* library = newLibrary();
@@ -44,10 +44,6 @@ int executeExercise3(){
 
     printFirstMenu();
     actionsPerson(library, studentsOrTeachers(library, amountOfStudents, amountOfTeachers));
-
-
-
-    
 
 
 
@@ -108,8 +104,8 @@ void actionsPerson(Library* library, Person* person) {
         printActions();
         switch (getIndex()) {
             case 1:
-                Borrow* borrow = chooseBorrow(getBorrows(library,person->code));
-                leaveMaterial(person, getMaterial(library,borrow->materialName), library, borrow; //personas no tienen material...
+                Borrow* borrow = chooseBorrow(library,person->code);
+                leaveMaterial(person, getMaterial(library,borrow->materialName), library, borrow); //personas no tienen material...
                 break;
             case 2:
                 takeMaterial(person, chooseMaterial(library), library, newBorrow(100, 2));
@@ -135,6 +131,17 @@ void printActions() {
 }
 
 
-Borrow *chooseBorrow(Borrow** borrow) {
-    return NULL;
+Borrow *chooseBorrow(Library* library, int personCode) {
+    Borrow** borrowArray = malloc(sizeof(Borrow)*library->borrowMaxCapacity);
+    int quantity =0;
+    for(int i=0;i<library->borrowMaxCapacity;i++){
+        if(library->borrowBooleanArray[i]==1){
+            if(library->borrowArray[i]->personCode==personCode){
+                borrowArray[i]=newBorrow(borrowArray[i]->price,library->borrowArray[i]->returnDays);
+                quantity++;
+            }
+        }
+    }
+    borrowArray = realloc(borrowArray, sizeof(Borrow)*quantity);
+
 }
