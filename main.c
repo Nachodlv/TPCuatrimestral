@@ -4,6 +4,6 @@
 
 int main(){
     //executeExercise1();
-   // executeExercise2();
-    executeExercise3();
+    //executeExercise2();
+    //executeExercise3();
 }

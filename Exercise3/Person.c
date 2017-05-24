@@ -10,11 +10,13 @@
 Person* newStudent(char* name,char* mail, int phone, int code, int enrollment){
     Person* person = malloc(sizeof(Person));
     person->personType=1;
-    person->name=malloc(sizeof(char)*strlen(name)+1);
-    person->mail=malloc(sizeof(char)*strlen(mail)+1);
+    person->name=malloc(sizeof(char)*(strlen(name)+1));
+    person->mail=malloc(sizeof(char)*(strlen(mail)+1));
     person->phone=phone;
     person->code=code;
     person->enrollment=enrollment;
+    person->booksQuantity=0;
+    person->debt=0;
     strcpy(person->name,name);
     strcpy(person->mail,mail);
     return person;
@@ -23,8 +25,8 @@ Person* newStudent(char* name,char* mail, int phone, int code, int enrollment){
 Person* newTeacher(char* name, char* mail, int phone, int code, int employeeNumber){
     Person* person =malloc(sizeof(Person));
     person->personType=2;
-    person->name=malloc(sizeof(char)*strlen(name)+1);
-    person->mail=malloc(sizeof(char)*strlen(mail)+1);
+    person->name=malloc(sizeof(char)*(strlen(name)+1));
+    person->mail=malloc(sizeof(char)*(strlen(mail)+1));
     person->phone=phone;
     person->code=code;
     person->employeeNumber=employeeNumber;
@@ -39,18 +41,4 @@ void freePerson(Person* person){
     free(person);
 }
 
-void takeMaterial(Person* person, Material* material,Library* library, Borrow* borrow){
-    takeOutMaterial(material);
-    removeMaterial(library,material->code);
-    borrow->personCode=person->code;
-    borrow->materialName=material->title;
-    person->booksQuantity++;
-    person->debt+=borrow->price;
-}
 
-void leaveMaterial(Person* person, Material* material, Library* library, Borrow* borrow){
-    enlistMaterial(material);
-    addMaterial(library,material);
-    person->booksQuantity--;
-    freeBorrow(removeBorrow(library,borrow->code));
-}

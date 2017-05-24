@@ -29,7 +29,8 @@ Library* newLibrary ();
 void freeLibrary(Library* library);
 void addMaterial(Library* library, Material* material);
 void addPerson(Library* library, Person* person);
-
+void takeMaterial(Person* person, Material* material, Library* library, Borrow* borrow);
+void leaveMaterial(Person* person, Material* material, Library* library, Borrow* borrow);
 Material* removeMaterial(Library* library,int materialCode);
 Person* removePerson(Library* library,int personCode);
 Borrow* removeBorrow(Library* library, int idBorrow);

@@ -8,9 +8,9 @@
 
 Library* newLibrary (){
     Library* library = malloc(sizeof(Library));
-    library->materialArray=malloc(sizeof(Material)*10);
-    library->personArray=malloc(sizeof(Person)*10);
-    library->borrowArray=malloc(sizeof(Borrow)*10);
+    library->materialArray=malloc(sizeof(Material*)*10);
+    library->personArray=malloc(sizeof(Person*)*10);
+    library->borrowArray=malloc(sizeof(Borrow*)*10);
     library->materialBooleanArray=malloc(sizeof(int)*10);
     library->personBooleanArray=malloc(sizeof(int)*10);
     library->borrowBooleanArray=malloc(sizeof(int)*10);
@@ -65,7 +65,7 @@ void addMaterial(Library* library, Material* material){
 }
 
 void increaseMaterialArray(Library* library){
-    library->materialArray=realloc(library->materialArray, sizeof(Material)*library->materialMaxCapacity*2);
+    library->materialArray=realloc(library->materialArray, sizeof(Material*)*library->materialMaxCapacity*2);
     library->materialBooleanArray=realloc(library->materialBooleanArray, sizeof(int)*library->materialMaxCapacity*2);
     for(int i=library->materialMaxCapacity;i<library->materialMaxCapacity*2;i++){
         library->materialBooleanArray[i]=0;
@@ -113,7 +113,7 @@ Person* removePerson(Library* library,int personCode){
 }
 
 void increasePersonArray(Library* library){
-    library->personArray=realloc(library->personArray, sizeof(Person)*library->personMaxCapacity*2);
+    library->personArray=realloc(library->personArray, sizeof(Person*)*library->personMaxCapacity*2);
     library->personBooleanArray=realloc(library->personBooleanArray, sizeof(int)*library->personMaxCapacity*2);
     for(int i=library->personMaxCapacity;i<library->personMaxCapacity*2;i++){
         library->personBooleanArray[i]=0;
@@ -145,7 +145,7 @@ Borrow* removeBorrow(Library* library, int idBorrow){
 }
 
 void increaseBorrowArray(Library* library){
-    library->borrowArray=realloc(library->borrowArray, sizeof(Borrow)*library->borrowMaxCapacity*2);
+    library->borrowArray=realloc(library->borrowArray, sizeof(Borrow*)*library->borrowMaxCapacity*2);
     library->borrowBooleanArray=realloc(library->borrowBooleanArray, sizeof(int)*library->borrowMaxCapacity*2);
     for(int i=library->borrowMaxCapacity;i<library->borrowMaxCapacity*2;i++){
         library->borrowBooleanArray[i]=0;
@@ -166,4 +166,20 @@ Material* getMaterial(Library* library, char* materialName){
         }
     }
     exit(2);
+}
+
+void takeMaterial(Person* person, Material* material,Library* library, Borrow* borrow){
+    takeOutMaterial(material);
+    removeMaterial(library,material->code);
+    borrow->personCode=person->code;
+    borrow->materialName=material->title;
+    person->booksQuantity++;
+    person->debt+=borrow->price;
+}
+
+void leaveMaterial(Person* person, Material* material, Library* library, Borrow* borrow){
+    enlistMaterial(material);
+    addMaterial(library,material);
+    person->booksQuantity--;
+    freeBorrow(removeBorrow(library,borrow->code));
 }
