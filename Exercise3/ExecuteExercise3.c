@@ -12,7 +12,6 @@
 
 void printActions();
 
-void printPersonDetails(Person *pPerson);
 
 Material* material1;
 
@@ -44,10 +43,10 @@ int executeExercise3(){
     addMaterial(library, magazine1);
 
 
-/*    printFirstMenu();
+    printFirstMenu();
     Person* person = studentsOrTeachers(library, amountOfStudents, amountOfTeachers);
     actionsPerson(library, person, amountOfBooks, amountOfMagazines);
-*/
+
     return 1;
 }
 

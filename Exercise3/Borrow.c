@@ -17,5 +17,6 @@ Borrow* newBorrow(double price, int returnDays, char* materialName){
 }
 
 void freeBorrow(Borrow* borrow){
+    free(borrow->materialName);
     free(borrow);
 }
