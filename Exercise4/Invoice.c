@@ -9,8 +9,8 @@ Invoice* newInvoice(int invoiceNumber, int nitHotel, char* hotelName, char* clie
     Invoice* invoice = malloc(sizeof(Invoice));
     invoice->invoiceNumber=invoiceNumber;
     invoice->nitHotel=nitHotel;
-    invoice->hotelName=malloc(sizeof(char)*strlen(hotelName));
-    invoice->clientName=malloc(sizeof(char)*strlen(clientName));
+    invoice->hotelName=malloc(sizeof(char)*(strlen(hotelName)+1));
+    invoice->clientName=malloc(sizeof(char)*(strlen(clientName)+1));
     invoice->clientDni=clientDni;
     invoice->price=price;
     strcpy(invoice->hotelName,hotelName);
