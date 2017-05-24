@@ -32,13 +32,11 @@ Material* newMagazine(int code, char* title, int year, char* editorial){
 }
 
 void enlistMaterial(Material* material){
-    material->status=malloc(sizeof(char)*(strlen("Disponible")+1));
-    strcpy(material->status,"Disponible");
+    material->status=1;
 }
 
 void takeOutMaterial(Material* material){
-    material->status=realloc(material->status,sizeof(char)*(strlen("No disponible")+1));
-    strcpy(material->status,"No disponible");
+    material->status=0;
 }
 
 void freeMaterial(Material* material){

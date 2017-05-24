@@ -11,7 +11,7 @@ struct material{
     char* author;
     char* title;
     int year;
-    char* status;
+    int status;
     char* editorial;
 };
 
