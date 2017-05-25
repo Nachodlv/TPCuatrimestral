@@ -25,7 +25,7 @@ Hotel* newHotel(char* name, int ninHotel, int roomsMaxCapacity);
 void freeHotel(Hotel* hotel);
 void addRoom(Hotel* hotel,Room* room);
 void addInvoice(Hotel* hotel,Invoice* invoice);
-Room* getRoom(Hotel* hotel,int roomNumber);
+Room* getRoom(Hotel* hotel, int roomNumber);
 int getInvoiceCode(Hotel* hotel);
 Invoice* payRoom(Client* client, Recepcionist* recepcionist, Hotel* hotel);
 #endif //TPCUATRIMESTRAL_HOTEL_H
