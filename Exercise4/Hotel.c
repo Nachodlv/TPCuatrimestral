@@ -2,6 +2,8 @@
 // Created by Oscar on 23/05/2017.
 //
 
+#include <stdlib.h>
+#include <memory.h>
 #include "Hotel.h"
 
 Hotel* newHotel(char* name, int ninHotel, int roomsMaxCapacity){
@@ -32,7 +34,7 @@ void freeHotel(Hotel* hotel){
 
 void addRoom(Hotel* hotel, Room* room){
     if(hotel->roomsQuantity == hotel->roomsMaxCapacity) {
-        growRoomsArray();
+        growRoomsArray(hotel);
     }
     hotel->roomsArray[hotel->roomsQuantity] = room;
     hotel->roomsQuantity = hotel->roomsQuantity+1;
@@ -41,9 +43,9 @@ void addRoom(Hotel* hotel, Room* room){
 
 void addInvoice(Hotel* hotel, Invoice* invoice){
     if(hotel->invoiceQuantity == hotel->invoiceMaxCapacity) {
-        growInvoiceArray();
+        growInvoiceArray(hotel);
     }
-    hotel->roomsInvoice[hotel->roomsInvoice] = room;
+    hotel->invoiceArray[hotel->invoiceQuantity] = invoice;
     hotel->invoiceQuantity = hotel->invoiceQuantity+1;
 }
 

@@ -17,7 +17,7 @@ struct receptionist{
     char* name;
     int dni;
 };
-Receptionist* newReceptionist(char* name,int dni, Hotel* hotel);
+Receptionist* newReceptionist(char* name,int dni);
 void freeReceptionist(Receptionist* receptionist);
 int checkIn(Client* client, Receptionist* receptionist, Hotel* hotel);
 void makeReservation(Client* client, int roomNumber, Receptionist* receptionist,int daysToStay);

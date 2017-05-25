@@ -5,7 +5,7 @@
 #include "Receptionist.h"
 #include <stdlib.h>
 #include <memory.h>
-Receptionist* newReceptionist(char* name,int dni, Hotel* hotel){
+Receptionist* newReceptionist(char* name,int dni){
     Receptionist* receptionist = malloc(sizeof(Receptionist));
     receptionist->name=malloc(sizeof(char)*(strlen(name)+1));
     receptionist->dni=dni;

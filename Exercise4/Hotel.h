@@ -27,5 +27,7 @@ void addRoom(Hotel* hotel,Room* room);
 void addInvoice(Hotel* hotel,Invoice* invoice);
 Room* getRoom(Hotel* hotel, int roomNumber);
 int getInvoiceCode(Hotel* hotel);
-Invoice* payRoom(Client* client, Receptionist* receptionist, Hotel* hotel);
+Invoice* payRoom(Client* client, Receptionist* receptionist, Hotel* hotel); //TODO
+void growRoomsArray(Hotel* hotel);
+void growInvoiceArray(Hotel* hotel);
 #endif //TPCUATRIMESTRAL_HOTEL_H
