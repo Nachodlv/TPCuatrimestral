@@ -17,7 +17,7 @@ Invoice* newInvoice(int invoiceNumber, int nitHotel, char* hotelName, char* clie
     strcpy(invoice->clientName,clientName);
     return invoice;
 }
-void free(Invoice* invoice){
+void freeInvoice(Invoice* invoice){
     free(invoice->hotelName);
     free(invoice->clientName);
     free(invoice);

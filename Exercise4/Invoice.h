@@ -18,5 +18,5 @@ struct invoice{
     double price;
 };
 Invoice* newInvoice(int invoiceNumber, int nitHotel, char* hotelName, char* clientName, int clientDni, double price);
-void free(Invoice* invoice);
+void freeInvoice(Invoice* invoice);
 #endif //TPCUATRIMESTRAL_INVOICE_H

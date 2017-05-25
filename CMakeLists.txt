@@ -62,6 +62,20 @@ set(SOURCE_FILES
         Exercise3/Person.c
         Exercise3/Person.h
         Exercise3/Borrow.c
-        Exercise3/Borrow.h)
+        Exercise3/Borrow.h
+
+        Exercise4/Client.c
+        Exercise4/Client.h
+        Exercise4/Hotel.c
+        Exercise4/Hotel.h
+        Exercise4/Invoice.h
+        Exercise4/Invoice.c
+        Exercise4/Receptionist.c
+        Exercise4/Receptionist.h
+        Exercise4/Reservation.c
+        Exercise4/Reservation.h
+        Exercise4/Room.c
+        Exercise4/Room.h
+        )
 
 add_executable(TPCuatrimestral ${SOURCE_FILES})

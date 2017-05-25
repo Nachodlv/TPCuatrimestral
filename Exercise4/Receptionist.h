@@ -7,17 +7,20 @@
 
 #include "Client.h"
 #include "Hotel.h"
-
+#include "Reservation.h"
 typedef struct receptionist Receptionist;
 struct receptionist{
     Reservation** reservationArray;
-    int* reservationBooleanQuantity;
+    int* reservationBooleanArray;
     int currentReservationQuantity;
     int reservationMaxCapacity;
     char* name;
     int dni;
 };
 Receptionist* newReceptionist(char* name,int dni, Hotel* hotel);
-int checkIn(Client* client, Receptionist receptionist);
-void makeReservation(Client* client, int roomNumber, Receptionist* receptionist );
+void freeReceptionist(Receptionist* receptionist);
+int checkIn(Client* client, Receptionist* receptionist, Hotel* hotel);
+void makeReservation(Client* client, int roomNumber, Receptionist* receptionist,int daysToStay);
+void deleteReservation(int clientDni,Receptionist* receptionist);
+void growReservationArray(Receptionist* receptionist);
 #endif //TPCUATRIMESTRAL_RECEPTIONIST_H
