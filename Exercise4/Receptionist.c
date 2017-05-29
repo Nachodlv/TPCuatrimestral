@@ -76,3 +76,12 @@ void deleteReservation(int clientDni,Receptionist* receptionist){
         }
     }
 }
+
+Reservation* getReservation(int clientDni, Receptionist* receptionist){
+    for(int i=0;i<receptionist->reservationMaxCapacity;i++){
+        if(receptionist->reservationBooleanArray[i]==1){
+            if(receptionist->reservationArray[i]->dni==clientDni) return receptionist->reservationArray[i];
+        }
+    }
+    exit(2);
+}

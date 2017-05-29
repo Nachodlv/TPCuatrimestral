@@ -21,6 +21,7 @@ Receptionist* newReceptionist(char* name,int dni);
 void freeReceptionist(Receptionist* receptionist);
 int checkIn(Client* client, Receptionist* receptionist, Hotel* hotel);
 void makeReservation(Client* client, int roomNumber, Receptionist* receptionist,int daysToStay);
+Reservation* getReservation(int clientDni, Receptionist* receptionist);
 void deleteReservation(int clientDni,Receptionist* receptionist);
 void growReservationArray(Receptionist* receptionist);
 #endif //TPCUATRIMESTRAL_RECEPTIONIST_H

@@ -72,4 +72,14 @@ int getInvoiceCode(Hotel* hotel) {
     return code;
 }
 
+Invoice* payRoom(Client* client, Receptionist* receptionist, Hotel* hotel){
+    Reservation* reservation = getReservation(client->dni,receptionist);
+    Room* room = getRoom(hotel,reservation->roomNumber);
+    room->available=1;
+    deleteReservation(client->dni,receptionist);
+    Invoice* invoice = newInvoice(getInvoiceCode(hotel),hotel->ninHotel,hotel->name,client->name,client->dni,room->pricePerDay*reservation->daysToStay);
+    addInvoice(hotel,invoice);
+    return invoice;
+}
+
 
