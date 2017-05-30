@@ -8,11 +8,11 @@
 #include "Client.h"
 typedef struct reservation Reservation;
 struct reservation{
-    char* clientNumber;
+    char* clientName;
     int dni;
     int roomNumber;
     int daysToStay;
 };
-Reservation* newReservation(Client* client, int roomNumber);
+Reservation* newReservation(Client* client, int roomNumber, int daysToStay);
 void freeReservation(Reservation* reservation);
 #endif //TPCUATRIMESTRAL_RESERVATION_H
