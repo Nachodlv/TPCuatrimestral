@@ -6,7 +6,7 @@
 #define TPCUATRIMESTRAL_DATABASE_H
 
 #include "Movie.h"
-#include "../Exercise4/Client.h"
+#include "Client.h"
 
 typedef struct dataBase DataBase;
 struct dataBase{
@@ -26,6 +26,6 @@ void addClient(Client* client, DataBase* dataBase);
 void growClientArray(DataBase* dataBase);
 Movie** getRentMovieClient(Id id, DataBase* dataBase);
 Movie** getMoviesAvailable(DataBase* dataBase);
-Movie getMovie(char* movieName, DataBase* dataBase);
+Movie* getMovie(char* movieName, DataBase* dataBase);
 int getIdCode(DataBase* dataBase);
 #endif //TPCUATRIMESTRAL_DATABASE_H

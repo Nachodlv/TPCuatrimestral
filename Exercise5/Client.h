@@ -11,7 +11,7 @@
 typedef struct client Client;
 struct client{
     char* name;
-    Id id;
+    Id* id;
 };
 Client* newClient(char* name, int numberId);
 void freeClient(Client* client);
