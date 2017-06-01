@@ -18,5 +18,5 @@ Client* newClient(char* name, int numberId){
 void freeClient(Client* client){
     free(client->name);
     freeId(client->id);
-    freeId(client);
+    free(client);
 }

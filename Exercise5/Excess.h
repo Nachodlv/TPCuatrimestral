@@ -13,7 +13,7 @@ struct excess{
     double costPerDay;
 };
 
-Excess* newExcess(int costOfMovieRentPerDay);
+Excess* newExcess(double costOfMovieRentPerDay);
 void freeExcess(Excess* excess);
 int moviesWithoutReturn(DataBase dataBase);
 void leaveMovie(Movie* movie, Excess* excess1);
