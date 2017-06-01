@@ -22,7 +22,7 @@ void freeDataBase(DataBase* dataBase){
         freeMovie(dataBase->movieArray[i]);
     }
     for(int i=0;i<dataBase->maxClients;i++){
-        freeClient(dataBase->clientArray[i]);
+        freeClientExercise5(dataBase->clientArray[i]);
     }
     free(dataBase->clientArray);
     free(dataBase->movieArray);

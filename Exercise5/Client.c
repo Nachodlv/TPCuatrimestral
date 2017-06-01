@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <memory.h>
 
-Client* newClient(char* name, int numberId){
+Client* newClientExercise5(char *name, int numberId){
     Client* client = malloc(sizeof(Client));
     client->name=malloc(sizeof(char)*strlen(name));
     client->id=malloc(sizeof(Id));
@@ -15,7 +15,7 @@ Client* newClient(char* name, int numberId){
     return client;
 }
 
-void freeClient(Client* client){
+void freeClientExercise5(Client* client){
     free(client->name);
     freeId(client->id);
     freeId(client);

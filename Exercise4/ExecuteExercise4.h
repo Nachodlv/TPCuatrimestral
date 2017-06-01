@@ -10,7 +10,7 @@
 
 int executeExercise4();
 void printClients(Client **clients, int amountOfClients);
-int getIndex();
+int getIndexExercise4();
 int getDays();
 void printOptions();
 void actions(Client* chosenClient, Hotel* hotel, Receptionist* receptionist);

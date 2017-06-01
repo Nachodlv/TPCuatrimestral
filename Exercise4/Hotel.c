@@ -77,9 +77,21 @@ Invoice* payRoom(Client* client, Receptionist* receptionist, Hotel* hotel){
     Room* room = getRoom(hotel,reservation->roomNumber);
     room->available=1;
     deleteReservation(client->dni,receptionist);
-    Invoice* invoice = newInvoice(getInvoiceCode(hotel),hotel->ninHotel,hotel->name,client->name,client->dni,room->pricePerDay*reservation->daysToStay);
+    Invoice* invoice = newInvoiceExercise4(getInvoiceCode(hotel),hotel->ninHotel,hotel->name,client->name,client->dni,room->pricePerDay*reservation->daysToStay);
     addInvoice(hotel,invoice);
     return invoice;
 }
-
+int checkIn(Client* client, Receptionist* receptionist, Hotel* hotel){
+    int roomNumber=-1;
+    for(int i=0;i<receptionist->reservationMaxCapacity;i++){
+        if(receptionist->reservationBooleanArray[i]==1){
+            if(receptionist->reservationArray[i]->dni==client->dni){
+                roomNumber=receptionist->reservationArray[i]->roomNumber;
+            }
+        }
+    }
+    if(roomNumber==-1) return 0;
+    getRoom(hotel,roomNumber)->available=0;
+    return 1;
+}
 

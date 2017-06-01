@@ -13,6 +13,6 @@ struct client{
     char* name;
     Id* id;
 };
-Client* newClient(char* name, int numberId);
-void freeClient(Client* client);
+Client* newClientExercise5(char* name, int numberId);
+void freeClientExercise5(Client* client);
 #endif //TPCUATRIMESTRAL_CLIENT_H

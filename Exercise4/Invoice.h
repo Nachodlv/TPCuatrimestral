@@ -5,9 +5,6 @@
 #ifndef TPCUATRIMESTRAL_INVOICE_H
 #define TPCUATRIMESTRAL_INVOICE_H
 
-#include "Receptionist.h"
-#include "Hotel.h"
-#include "Client.h"
 typedef struct invoice Invoice;
 struct invoice{
     int invoiceNumber;
@@ -17,6 +14,6 @@ struct invoice{
     int clientDni;
     double price;
 };
-Invoice* newInvoice(int invoiceNumber, int nitHotel, char* hotelName, char* clientName, int clientDni, double price);
-void freeInvoice(Invoice* invoice);
+Invoice* newInvoiceExercise4(int invoiceNumber, int nitHotel, char* hotelName, char* clientName, int clientDni, double price);
+void freeInvoiceExercise4(Invoice* invoice);
 #endif //TPCUATRIMESTRAL_INVOICE_H

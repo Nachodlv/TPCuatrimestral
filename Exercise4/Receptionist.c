@@ -30,19 +30,7 @@ void freeReceptionist(Receptionist* receptionist){
     free(receptionist);
 }
 
-int checkIn(Client* client, Receptionist* receptionist, Hotel* hotel){
-    int roomNumber=-1;
-    for(int i=0;i<receptionist->reservationMaxCapacity;i++){
-        if(receptionist->reservationBooleanArray[i]==1){
-            if(receptionist->reservationArray[i]->dni==client->dni){
-                roomNumber=receptionist->reservationArray[i]->roomNumber;
-            }
-        }
-    }
-    if(roomNumber==-1) return 0;
-    getRoom(hotel,roomNumber)->available=0;
-    return 1;
-}
+
 
 void makeReservation(Client* client, int roomNumber, Receptionist* receptionist,int daysToStay){
     for(int i=0;i<receptionist->reservationMaxCapacity;i++){

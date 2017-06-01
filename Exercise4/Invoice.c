@@ -5,7 +5,7 @@
 #include "Invoice.h"
 #include <stdlib.h>
 #include <memory.h>
-Invoice* newInvoice(int invoiceNumber, int nitHotel, char* hotelName, char* clientName, int clientDni, double price){
+Invoice* newInvoiceExercise4(int invoiceNumber, int nitHotel, char* hotelName, char* clientName, int clientDni, double price){
     Invoice* invoice = malloc(sizeof(Invoice));
     invoice->invoiceNumber=invoiceNumber;
     invoice->nitHotel=nitHotel;
@@ -17,7 +17,7 @@ Invoice* newInvoice(int invoiceNumber, int nitHotel, char* hotelName, char* clie
     strcpy(invoice->clientName,clientName);
     return invoice;
 }
-void freeInvoice(Invoice* invoice){
+void freeInvoiceExercise4(Invoice* invoice){
     free(invoice->hotelName);
     free(invoice->clientName);
     free(invoice);

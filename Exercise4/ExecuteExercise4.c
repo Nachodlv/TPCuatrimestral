@@ -2,16 +2,16 @@
 // Created by Gonzalo de Achaval on 31/5/17.
 //
 
+
+#include <stdio.h>
 #include <stdlib.h>
-#include <printf.h>
 #include "ExecuteExercise4.h"
-#include "Hotel.h"
 
 
 int executeExercise4(){
-    Client* client1 = newClient("Nacho", 40693681);
-    Client* client2 = newClient("Gonza", 41222861);
-    Client* client3 = newClient("Nanza", 12345678);
+    Client* client1 = newClientExercise4("Nacho", 40693681);
+    Client* client2 = newClientExercise4("Gonza", 41222861);
+    Client* client3 = newClientExercise4("Nanza", 12345678);
     int amountOfClients = 3;
     Client** clients = malloc(sizeof(Client*)*amountOfClients);
     clients[0] = client1;
@@ -32,7 +32,7 @@ int executeExercise4(){
     Receptionist* receptionist = newReceptionist("Jimena", 30123654);
 
     printClients(clients, amountOfClients);
-    Client* chosenClient = clients[getIndex()];
+    Client* chosenClient = clients[getIndexExercise4()];
     actions(chosenClient, hotel, receptionist);
 
     return 0;
@@ -48,7 +48,7 @@ void printClients(Client **clients, int amountOfClients) {
     }
 }
 
-int getIndex() {
+int getIndexExercise4() {
     int index;
     printf("%s", "Choose valid option: \t");
     scanf(" %i*c",&index);
@@ -75,7 +75,7 @@ void actions(Client* chosenClient, Hotel* hotel, Receptionist* receptionist) {
     int trueFalse = 1;
     while(trueFalse){
         printOptions();
-        int i = getIndex();
+        int i = getIndexExercise4();
 
         switch(i){
             case 1:
@@ -106,7 +106,7 @@ void reservationMenu(Hotel* hotel, Client* client, Receptionist* receptionist) {
             printf("\n");
         }
     }
-    Room* chosenRoom = hotel->roomsArray[getIndex()-1];
+    Room* chosenRoom = hotel->roomsArray[getIndexExercise4()-1];
     int daysToStay = getDays();
     makeReservation(client, chosenRoom->roomNumber, receptionist, daysToStay);
 }
