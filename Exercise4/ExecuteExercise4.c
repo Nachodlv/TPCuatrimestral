@@ -32,7 +32,7 @@ int executeExercise4(){
     Receptionist* receptionist = newReceptionist("Jimena", 30123654);
 
     printClients(clients, amountOfClients);
-    Client* chosenClient = clients[getIndexExercise4()];
+    Client* chosenClient = clients[getIndexExercise4()-1];
     actions(chosenClient, hotel, receptionist);
 
     return 0;
