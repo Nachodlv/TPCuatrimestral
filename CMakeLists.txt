@@ -64,6 +64,8 @@ set(SOURCE_FILES
         Exercise3/Borrow.c
         Exercise3/Borrow.h
 
+        Exercise4/Room.c
+        Exercise4/Room.h
         Exercise4/Client.c
         Exercise4/Client.h
         Exercise4/Hotel.c
@@ -74,8 +76,8 @@ set(SOURCE_FILES
         Exercise4/Receptionist.h
         Exercise4/Reservation.c
         Exercise4/Reservation.h
-        Exercise4/Room.c
-        Exercise4/Room.h
+        Exercise4/ExecuteExercise4.c
+        Exercise4/ExecuteExercise4.h
 
         Exercise5/Id.c
         Exercise5/Id.h
