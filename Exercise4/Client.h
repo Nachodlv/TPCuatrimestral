@@ -9,7 +9,7 @@ struct client{
     char* name;
     int dni;
 };
-Client* newClient(char* name,int dni);
-void freeClient(Client* client);
+Client* newClientExercise4(char *name, int dni);
+void freeClientExercise4(Client* client);
 
 #endif //TPCUATRIMESTRAL_CLIENT_H

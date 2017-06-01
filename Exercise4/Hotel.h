@@ -8,6 +8,8 @@
 #include "Room.h"
 #include "Invoice.h"
 #include "Client.h"
+#include "Receptionist.h"
+
 typedef struct hotel Hotel;
 struct hotel{
     char* name;
@@ -28,6 +30,7 @@ void addInvoice(Hotel* hotel,Invoice* invoice);
 Room* getRoom(Hotel* hotel, int roomNumber);
 int getInvoiceCode(Hotel* hotel);
 Invoice* payRoom(Client* client, Receptionist* receptionist, Hotel* hotel);
+int checkIn(Client* client, Receptionist* receptionist, Hotel* hotel);
 void growRoomsArray(Hotel* hotel);
 void growInvoiceArray(Hotel* hotel);
 #endif //TPCUATRIMESTRAL_HOTEL_H
