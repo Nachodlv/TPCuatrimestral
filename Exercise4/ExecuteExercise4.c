@@ -65,10 +65,11 @@ int getDays() {
 }
 
 void printOptions() {
-    printf("%s", "1. Make reservation");
-    printf("%s", "2. Check-in");
-    printf("%s", "3. Pay Room");
-    printf("%s", "4. Exit");
+    printf("\n");
+    printf("%s\n", "1. Make reservation");
+    printf("%s\n", "2. Check-in");
+    printf("%s\n", "3. Pay Room");
+    printf("%s\n", "4. Exit");
 }
 
 void actions(Client* chosenClient, Hotel* hotel, Receptionist* receptionist) {
@@ -100,9 +101,9 @@ void reservationMenu(Hotel* hotel, Client* client, Receptionist* receptionist) {
     for(int i=0; i<hotel->roomsQuantity; i++){
         if(hotel->roomsArray[i]->available == 1) {
             printf("%d", i+1);
-            printf("%s%s", "Room type: ", hotel->roomsArray[i]->roomType);
-            printf("%s%d", "Room number: ", hotel->roomsArray[i]->roomNumber);
-            printf("%s%.2f", "Price per day", hotel->roomsArray[i]->pricePerDay);
+            printf("%s%s\n", ". Room type: ", hotel->roomsArray[i]->roomType);
+            printf("%s%d\n", "Room number: ", hotel->roomsArray[i]->roomNumber);
+            printf("%s%.2f\n", "Price per day: ", hotel->roomsArray[i]->pricePerDay);
             printf("\n");
         }
     }
@@ -112,10 +113,10 @@ void reservationMenu(Hotel* hotel, Client* client, Receptionist* receptionist) {
 }
 
 void checkInMenu(Hotel* hotel, Client* client, Receptionist* receptionist) {
-    if(checkIn(client, receptionist, hotel) == -1){
-        printf("%s", "Reservation not found");
+    if(checkIn(client, receptionist, hotel) == 0){
+        printf("%s", "Reservation not found\n");
     }else{
-        printf("%s%s%s", "WELCOME to ", hotel->name, " have a nice stay");
+        printf("%s%s%s", "WELCOME to ", hotel->name, ", hope you have a nice stay\n");
     }
 }
 
@@ -129,8 +130,9 @@ void payRoomMenu(Hotel* hotel, Client* client, Receptionist* receptionist) {
 }
 
 void printInvoice(Invoice* invoice) {
-    printf("%s%d", "Invoice number: ", invoice->invoiceNumber);
-    printf("%s%s", "Client name: ", invoice->clientName);
-    printf("%s%d", "Client DNI: ", invoice->clientDni);
-    printf("%s%.2f", "To pay: ", invoice->price);
+    printf("\n");
+    printf("%s%d\n", "Invoice number: ", invoice->invoiceNumber);
+    printf("%s%s\n", "Client name: ", invoice->clientName);
+    printf("%s%d\n", "Client DNI: ", invoice->clientDni);
+    printf("%s%.2f\n", "To pay: ", invoice->price);
 }
