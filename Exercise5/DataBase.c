@@ -64,6 +64,7 @@ Movie** getRentMovieClient(Id id, DataBase* dataBase){
             counter++;
         }
     }
+    movieArray[counter]=NULL;
     movieArray=realloc(movieArray, sizeof(Movie*)*counter);
     return movieArray;
 }
@@ -77,6 +78,7 @@ Movie** getMoviesAvailable(DataBase* dataBase){
             counter++;
         }
     }
+    movieArray[counter]=NULL;
     movieArray=realloc(movieArray, sizeof(Movie*)*counter);
     return movieArray;
 }

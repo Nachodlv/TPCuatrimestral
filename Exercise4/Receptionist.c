@@ -71,5 +71,5 @@ Reservation* getReservation(int clientDni, Receptionist* receptionist){
             if(receptionist->reservationArray[i]->dni==clientDni) return receptionist->reservationArray[i];
         }
     }
-    exit(2);
+    return NULL;
 }

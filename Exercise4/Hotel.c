@@ -53,7 +53,7 @@ Room* getRoom(Hotel* hotel, int roomNumber){
     for(int i=0; i<hotel->roomsQuantity; i++){
         if(hotel->roomsArray[i]->roomNumber==roomNumber) return hotel->roomsArray[i];
     }
-    exit(2);
+    return NULL;
 }
 
 void growRoomsArray(Hotel* hotel){
@@ -74,7 +74,11 @@ int getInvoiceCode(Hotel* hotel) {
 
 Invoice* payRoom(Client* client, Receptionist* receptionist, Hotel* hotel){
     Reservation* reservation = getReservation(client->dni,receptionist);
+    if(reservation==NULL)
+        return NULL;
     Room* room = getRoom(hotel,reservation->roomNumber);
+    if(room==NULL)
+        return NULL;
     room->available=1;
     deleteReservation(client->dni,receptionist);
     Invoice* invoice = newInvoiceExercise4(getInvoiceCode(hotel),hotel->ninHotel,hotel->name,client->name,client->dni,room->pricePerDay*reservation->daysToStay);
