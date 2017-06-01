@@ -17,6 +17,6 @@ void actions(Client* chosenClient, Hotel* hotel, Receptionist* receptionist);
 void reservationMenu(Hotel* hotel, Client* client, Receptionist* receptionist);
 void checkInMenu(Hotel* hotel, Client* client, Receptionist* receptionist);
 void payRoomMenu(Hotel* hotel, Client* client, Receptionist* receptionist);
-void printInvoice(Invoice* invoice);
+void printInvoice(Invoice* invoice, Hotel* hotel);
 
 #endif //TPCUATRIMESTRAL_EXECUTEEXERCISE4_H

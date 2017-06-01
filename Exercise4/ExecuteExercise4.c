@@ -123,15 +123,15 @@ void checkInMenu(Hotel* hotel, Client* client, Receptionist* receptionist) {
 void payRoomMenu(Hotel* hotel, Client* client, Receptionist* receptionist) {
     Invoice* invoice = payRoom(client, receptionist, hotel);
     if(invoice == NULL){
-        printf("%s", "Operation cannot be completed. Please check you checked in.");
+        printf("%s", "Operation cannot be completed. Please check-in.\n");
     }else{
-        printInvoice(invoice);
+        printInvoice(invoice, hotel);
     }
 }
 
-void printInvoice(Invoice* invoice) {
+void printInvoice(Invoice* invoice, Hotel* hotel) {
     printf("\n");
-    printf("%s%d\n", "Invoice number: ", invoice->invoiceNumber);
+    printf("%s%d\n", "Invoice number: ", getInvoiceCode(hotel));
     printf("%s%s\n", "Client name: ", invoice->clientName);
     printf("%s%d\n", "Client DNI: ", invoice->clientDni);
     printf("%s%.2f\n", "To pay: ", invoice->price);
