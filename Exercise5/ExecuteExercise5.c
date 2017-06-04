@@ -99,38 +99,51 @@ void clientDecision(DataBase* database, Client* client, Excess* excess) {
 }
 
 void chooseMovieToLeave(DataBase* database, Client* client, Excess* excess) {
-    printMoviesToLeave(database, client->id);
-    Movie* chosenMovie = database->movieArray[getIndexExercise5()-1];
+    int counter=1;
+    Movie** movieArray = malloc(sizeof(Movie*)*database->movieQuantity);
+    for(int i=0;i<database->movieQuantity;i++){
+        if(database->movieArray[i]->numberId==client->id->numberId){
+            printf("%d. ", counter);
+            printf("%s\n", database->movieArray[i]->name);
+            counter++;
+        }
+    }
+    if(counter==1){
+        printf("You do not have movies to leave");
+        return;
+    }
+    Movie* chosenMovie = movieArray[getIndexExercise5()-1];
+    if(chosenMovie==NULL){
+        printf("Please choose a valid option");
+        chooseMovieToLeave(database,client,excess);
+        return;
+    }
     leaveMovie(chosenMovie, excess);
 }
 
-void printMoviesToLeave(DataBase* database, Id* id) {
+void chooseMovie(DataBase* dataBase, Client* client) {
     int counter=1;
-    for(int i=0;i<database->movieQuantity;i++){
-        if(database->movieArray[i]->numberId==id->numberId){
+    Movie** movieArray = malloc(sizeof(Movie*)*dataBase->movieQuantity);
+    for(int i=0;i<dataBase->movieQuantity;i++){
+        if(dataBase->movieArray[i]->available==1){
             printf("%d. ", counter);
-            printf("%s\n", database->movieArray[i]->name);
+            printf("%s\n", dataBase->movieArray[i]->name);
+            movieArray[counter-1]=dataBase->movieArray[i];
             counter++;
         }
     }
-}
-
-void chooseMovie(DataBase* dataBase, Client* client) {
-    printAvailableMovies(dataBase);
-    Movie* chosenMovie = dataBase->movieArray[getIndexExercise5()-1];
+    if(counter==1){
+        printf("There are not available movies right now");
+        return;
+    }
+    Movie* chosenMovie = movieArray[getIndexExercise5()-1];
+    if(chosenMovie==NULL){
+        printf("Please choose a valid option");
+        chooseMovie(dataBase,client);
+        return;
+    }
     int amount = getDaysToRent();
     rentMovie(chosenMovie, client->id, amount);
-}
-
-void printAvailableMovies(DataBase* database) {
-    int counter=1;
-    for(int i=0;i<database->movieQuantity;i++){
-        if(database->movieArray[i]->available==1){
-            printf("%d. ", counter);
-            printf("%s\n", database->movieArray[i]->name);
-            counter++;
-        }
-    }
 }
 
 void printFirstOptionClient() {
