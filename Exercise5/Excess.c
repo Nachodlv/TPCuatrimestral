@@ -17,7 +17,7 @@ void freeExcess(Excess* excess){
 
 int moviesWithoutReturn(DataBase* dataBase){
     int counter=0;
-    for(int i=0;i<dataBase->maxMovies;i++){
+    for(int i=0;i<dataBase->movieQuantity;i++){
         if(dataBase->movieArray[i]->available==0){
             counter++;
         }

@@ -3,8 +3,10 @@
 //
 
 #include <stdlib.h>
-#include <printf.h>
+//#include <printf.h>
 #include <memory.h>
+#include <stdio.h>
+#include <ctype.h>
 #include "ExecuteExercise5.h"
 #include "Client.h"
 #include "Admin.h"
@@ -13,9 +15,10 @@
 
 
 int executeExercise5(){
-    Client* client1 = newClientExercise5("Nacho", 40693681);
-    Client* client2 = newClientExercise5("Gonza", 41222861);
-    Client* client3 = newClientExercise5("Nanza", 12345678);
+    DataBase* database = newDataBase();
+    Client* client1 = newClientExercise5("Nacho", getIdCode(database));
+    Client* client2 = newClientExercise5("Gonza", getIdCode(database));
+    Client* client3 = newClientExercise5("Nanza", getIdCode(database));
 
     Admin* admin1 = newAdmin("NachoADMIN", 40693682);
     Admin* admin2 = newAdmin("GonzaADMIN", 41222862);
@@ -31,7 +34,6 @@ int executeExercise5(){
     Movie* movie3 = newMovie("Inception");
     Movie* movie4 = newMovie("In Time");
 
-    DataBase* database = newDataBase();
     addMovie(movie1, database);
     addMovie(movie2, database);
     addMovie(movie3, database);
@@ -82,7 +84,8 @@ void clientDecision(DataBase* database, Client* client, Excess* excess) {
             case 3:
                 truefalse = 0;
                 break;
-            default: break;
+            default:
+                break;
 
         }
     }
@@ -95,10 +98,13 @@ void chooseMovieToLeave(DataBase* database, Client* client, Excess* excess) {
 }
 
 void printMoviesToLeave(DataBase* database, Id* id) {
-    int i=0;
-    while(getRentMovieClient(id, database)[i] != NULL){
-        printf("%d", i+1);
-        printf("%s\n", getRentMovieClient(id, database)[i]->name);
+    int counter=1;
+    for(int i=0;i<database->movieQuantity;i++){
+        if(database->movieArray[i]->numberId==id->numberId){
+            printf("%d. ", counter);
+            printf("%s\n", getRentMovieClient(id, database)[i]->name);
+            counter++;
+        }
     }
 }
 
@@ -110,10 +116,13 @@ void chooseMovie(DataBase* dataBase, Client* client) {
 }
 
 void printAvailableMovies(DataBase* database) {
-    int i=0;
-    while(getMoviesAvailable(database)[i] != NULL){
-        printf("%d", i+1);
-        printf("%s\n", getMoviesAvailable(database)[i]->name);
+    int counter=1;
+    for(int i=0;i<database->movieQuantity;i++){
+        if(database->movieArray[i]->available==1){
+            printf("%d. ", counter);
+            printf("%s\n", database->movieArray[i]->name);
+            counter++;
+        }
     }
 }
 
@@ -126,17 +135,23 @@ void printFirstOptionClient() {
 
 void adminDecision(DataBase* database, Excess* excess) {
     printAdminOptions();
-    switch(getIndexExercise5()){
-        case 1:
-            printf("%d\n", moviesWithoutReturn(database));
-            break;
-        case 2:
-            printf("%.2f\n", excess->money);
-            break;
-        case 3:
-            newClientExercise5(scanChar(), getID());
-            break;
-        default: break;
+    while(1) {
+        switch (getIndexExercise5()) {
+            case 1:
+                printf("%d\n", moviesWithoutReturn(database));
+                break;
+            case 2:
+                printf("%.2f\n", excess->money);
+                break;
+            case 3:
+                newClientExercise5(scanChar(),getIdCode(database) );
+                break;
+            case 4:
+                return;
+            default:
+                printf("Please choose a valid option\n");
+                break;
+        }
     }
 }
 
@@ -144,17 +159,16 @@ void printAdminOptions() {
     printf("%s\n", "1. See amount of movies without return");
     printf("%s\n", "2. See money accumulated");
     printf("%s\n", "3. Create client");
+    printf("4. Exit\n");
 }
 
 
 void printClientsExercise5(DataBase* database) {
     printf("\nCLIENTS\n");
     Client** clients = database->clientArray;
-    int i=0;
-    while(clients[i] != NULL){
+    for(int i=0;i<database->clientQuantity;i++){
         printf("%d%s", i+1, ". ");
         printf("%s\n", clients[i]->name);
-        i++;
     }
 }
 
@@ -210,14 +224,6 @@ char* scanChar(){
         }
         printf("Please enter the name of client: \n");
     }
-}
-
-int getID() {
-    int id;
-    printf("%s", "Please enter the ID of the client:\t");
-    scanf(" %i*c",&id);
-    printf("\n");
-    return id;
 }
 
 int getDaysToRent() {

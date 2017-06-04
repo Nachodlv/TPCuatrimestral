@@ -23,7 +23,6 @@ void printClientsExercise5(DataBase* database);
 void printAdmins(Admin** admins, int amountOfAdmins);
 int getIndexExercise5();
 char* scanChar();
-int getID();
 int getDaysToRent();
 
 
