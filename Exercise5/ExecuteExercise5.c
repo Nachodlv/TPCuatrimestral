@@ -51,22 +51,29 @@ int executeExercise5(){
 }
 
 void firstMenu(Admin** admins, int amountOfAdmins, DataBase* database, Excess* excess) {
-    printf("\n");
-    printf("%s\n", "1. Print admins");
-    printf("%s\n", "2. Print clients");
+    int trueFalse = 1;
+    while(trueFalse){
+        printf("\n");
+        printf("%s\n", "1. Print admins");
+        printf("%s\n", "2. Print clients");
 
-    switch(getIndexExercise5()){
-        case 1:
-            printAdmins(admins, amountOfAdmins);
-            Admin* admin = admins[getIndexExercise5()-1];
-            adminDecision(database, excess);
-            break;
-        case 2:
-            printClientsExercise5(database);
-            Client* client = database->clientArray[getIndexExercise5()-1];
-            clientDecision(database, client, excess);
-            break;
-        default: break;
+        switch(getIndexExercise5()) {
+            case 1:
+                printAdmins(admins, amountOfAdmins);
+                Admin* admin = admins[getIndexExercise5() - 1];
+                adminDecision(database, excess);
+                break;
+            case 2:
+                printClientsExercise5(database);
+                Client *client = database->clientArray[getIndexExercise5() - 1];
+                clientDecision(database, client, excess);
+                break;
+            case 3:
+                trueFalse=0;
+                break;
+            default:
+                break;
+        }
     }
 }
 
@@ -134,8 +141,8 @@ void printFirstOptionClient() {
 }
 
 void adminDecision(DataBase* database, Excess* excess) {
-    printAdminOptions();
     while(1) {
+        printAdminOptions();
         switch (getIndexExercise5()) {
             case 1:
                 printf("%d\n", moviesWithoutReturn(database));
@@ -156,6 +163,7 @@ void adminDecision(DataBase* database, Excess* excess) {
 }
 
 void printAdminOptions() {
+    printf("\n");
     printf("%s\n", "1. See amount of movies without return");
     printf("%s\n", "2. See money accumulated");
     printf("%s\n", "3. Create client");
