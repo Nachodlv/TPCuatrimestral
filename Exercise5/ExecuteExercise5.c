@@ -151,7 +151,7 @@ void adminDecision(DataBase* database, Excess* excess) {
                 printf("%.2f\n", excess->money);
                 break;
             case 3:
-                newClientExercise5(scanChar(),getIdCode(database) );
+                caseNewClient(database);
                 break;
             case 4:
                 return;
@@ -160,6 +160,11 @@ void adminDecision(DataBase* database, Excess* excess) {
                 break;
         }
     }
+}
+
+void caseNewClient(DataBase* database){
+    Client* client = newClientExercise5(scanChar(),getIdCode(database));
+    addClient(client, database);
 }
 
 void printAdminOptions() {

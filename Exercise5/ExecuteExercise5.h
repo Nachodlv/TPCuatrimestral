@@ -24,6 +24,7 @@ void printAdmins(Admin** admins, int amountOfAdmins);
 int getIndexExercise5();
 char* scanChar();
 int getDaysToRent();
+void caseNewClient(DataBase* database);
 
 
 #endif //TPCUATRIMESTRAL_EXECUTEEXERCISE5_H
