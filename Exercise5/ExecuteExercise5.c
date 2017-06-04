@@ -56,6 +56,7 @@ void firstMenu(Admin** admins, int amountOfAdmins, DataBase* database, Excess* e
         printf("\n");
         printf("%s\n", "1. Print admins");
         printf("%s\n", "2. Print clients");
+        printf("%s\n", "3. Exit");
 
         switch(getIndexExercise5()) {
             case 1:
@@ -105,6 +106,7 @@ void chooseMovieToLeave(DataBase* database, Client* client, Excess* excess) {
         if(database->movieArray[i]->numberId==client->id->numberId){
             printf("%d. ", counter);
             printf("%s\n", database->movieArray[i]->name);
+            movieArray[counter-1]=database->movieArray[i];
             counter++;
         }
     }
