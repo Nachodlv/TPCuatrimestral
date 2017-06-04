@@ -93,7 +93,7 @@ void clientDecision(DataBase* database, Client* client, Excess* excess) {
 
 void chooseMovieToLeave(DataBase* database, Client* client, Excess* excess) {
     printMoviesToLeave(database, client->id);
-    Movie* chosenMovie = getRentMovieClient(client->id, database)[getIndexExercise5()-1];
+    Movie* chosenMovie = database->movieArray[getIndexExercise5()-1];
     leaveMovie(chosenMovie, excess);
 }
 
@@ -102,7 +102,7 @@ void printMoviesToLeave(DataBase* database, Id* id) {
     for(int i=0;i<database->movieQuantity;i++){
         if(database->movieArray[i]->numberId==id->numberId){
             printf("%d. ", counter);
-            printf("%s\n", getRentMovieClient(id, database)[i]->name);
+            printf("%s\n", database->movieArray[i]->name);
             counter++;
         }
     }
@@ -110,7 +110,7 @@ void printMoviesToLeave(DataBase* database, Id* id) {
 
 void chooseMovie(DataBase* dataBase, Client* client) {
     printAvailableMovies(dataBase);
-    Movie* chosenMovie = getMoviesAvailable(dataBase)[getIndexExercise5()-1];
+    Movie* chosenMovie = dataBase->movieArray[getIndexExercise5()-1];
     int amount = getDaysToRent();
     rentMovie(chosenMovie, client->id, amount);
 }

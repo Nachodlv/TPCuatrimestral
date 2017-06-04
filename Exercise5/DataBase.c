@@ -55,43 +55,6 @@ void growClientArray(DataBase* dataBase){
     dataBase->clientArray=realloc(dataBase->clientArray, sizeof(Client*)*dataBase->maxClients);
 }
 
-Movie** getRentMovieClient(Id* id, DataBase* dataBase){
-    Movie** movieArray = malloc(sizeof(Movie*)*dataBase->maxMovies);
-    int counter=0;
-    for(int i=0;i<dataBase->movieQuantity;i++){
-        if(dataBase->movieArray[i]->numberId==id->numberId){
-            movieArray[counter]=dataBase->movieArray[i];
-            counter++;
-        }
-    }
-    movieArray[counter]=NULL;
-    movieArray=realloc(movieArray, sizeof(Movie*)*counter);
-    return movieArray;
-}
-
-Movie** getMoviesAvailable(DataBase* dataBase){
-    Movie** movieArray = malloc(sizeof(Movie*)*dataBase->maxMovies);
-    int counter=0;
-    for(int i=0;i<dataBase->movieQuantity;i++){
-        if(dataBase->movieArray[i]->available==1){
-            movieArray[counter]=dataBase->movieArray[i];
-            counter++;
-        }
-    }
-    movieArray[counter]='\0';
-    movieArray=realloc(movieArray, sizeof(Movie*)*counter);
-    return movieArray;
-}
-
-Movie* getMovie(char* movieName, DataBase* dataBase){
-    for(int i=0;i<dataBase->movieQuantity;i++){
-        if(strcmp(dataBase->movieArray[i]->name,movieName)==0){
-            return dataBase->movieArray[i];
-        }
-    }
-    return NULL;
-}
-
 int getIdCode(DataBase* dataBase){
     int aux = dataBase->idCode;
     dataBase->idCode++;
