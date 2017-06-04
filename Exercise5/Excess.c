@@ -15,10 +15,10 @@ void freeExcess(Excess* excess){
     free(excess);
 }
 
-int moviesWithoutReturn(DataBase dataBase){
+int moviesWithoutReturn(DataBase* dataBase){
     int counter=0;
-    for(int i=0;i<dataBase.maxMovies;i++){
-        if(dataBase.movieArray[i]->available==0){
+    for(int i=0;i<dataBase->maxMovies;i++){
+        if(dataBase->movieArray[i]->available==0){
             counter++;
         }
     }

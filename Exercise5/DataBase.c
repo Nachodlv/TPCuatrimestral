@@ -55,11 +55,11 @@ void growClientArray(DataBase* dataBase){
     dataBase->clientArray=realloc(dataBase->clientArray, sizeof(Client*)*dataBase->maxClients);
 }
 
-Movie** getRentMovieClient(Id id, DataBase* dataBase){
+Movie** getRentMovieClient(Id* id, DataBase* dataBase){
     Movie** movieArray = malloc(sizeof(Movie*)*dataBase->maxMovies);
     int counter=0;
     for(int i=0;i<dataBase->maxMovies;i++){
-        if(dataBase->movieArray[i]->numberId==id.numberId){
+        if(dataBase->movieArray[i]->numberId==id->numberId){
             movieArray[counter]=dataBase->movieArray[i];
             counter++;
         }

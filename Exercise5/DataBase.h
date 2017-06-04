@@ -24,7 +24,7 @@ void addMovie(Movie* movie, DataBase* dataBase);
 void growMovieArray(DataBase* dataBase);
 void addClient(Client* client, DataBase* dataBase);
 void growClientArray(DataBase* dataBase);
-Movie** getRentMovieClient(Id id, DataBase* dataBase);
+Movie** getRentMovieClient(Id* id, DataBase* dataBase);
 Movie** getMoviesAvailable(DataBase* dataBase);
 Movie* getMovie(char* movieName, DataBase* dataBase);
 int getIdCode(DataBase* dataBase);

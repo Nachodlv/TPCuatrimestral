@@ -15,7 +15,7 @@ struct excess{
 
 Excess* newExcess(int costOfMovieRentPerDay);
 void freeExcess(Excess* excess);
-int moviesWithoutReturn(DataBase dataBase);
+int moviesWithoutReturn(DataBase* dataBase);
 void leaveMovie(Movie* movie, Excess* excess1);
 
 #endif //TPCUATRIMESTRAL_EXCESS_H
